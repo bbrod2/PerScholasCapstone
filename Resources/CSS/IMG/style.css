@@ -1,0 +1,403 @@
+/* ---------------------------------------------------------*/
+/* BASIC SET-UP */
+/*----------------------------------------------------------*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    background-color: #ffffff;
+    /*color:*/
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+
+}
+
+.clearfix {
+    zoom: 1
+}
+
+.clearfix:after {
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+
+
+}
+
+/* #0984e3 Button color*/
+
+
+/* ---------------------------------------------------------*/
+/* BASIC SET-UP End */
+/*----------------------------------------------------------*/
+
+/* ---------------------------------------------------------*/
+/* REUSABLE COMPONENTS */
+/*----------------------------------------------------------*/
+.row {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+section {
+    padding: 80px 0px;
+
+}
+
+.box {
+    padding: 1%;
+
+}
+
+/* -HEADINGS---------------------------------------*/
+
+
+
+h2,
+h3 {
+    text-transform: uppercase;
+    font-weight: 300;
+
+
+}
+
+h1 {
+    margin-top: 0;
+    color: black;
+    margin-bottom: 20px;
+    font-size: 580%;
+    word-spacing: 4px;
+    font-weight: normal;
+    text-align: center;
+}
+
+h2 {
+    font-size: 200%;
+    word-spacing: 2px;
+    text-align: center;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+
+}
+
+
+h3 {
+
+    font-size: 110%;
+    margin-bottom: 15px;
+}
+
+h2:after {
+
+    display: block;
+    height: 2px;
+    background-color: #0984e3;
+    content: " ";
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+/* -Paragraphs---------------------------------------*/
+
+.main-paragraph {
+    line-height: 145%;
+    font-size: 140%;
+}
+
+.form-paragraph {
+    font-weight: normal;
+    font-size: 135%;
+    margin-bottom: 60px;
+    margin-top: 60px;
+}
+
+.name-paragraph {
+    font-weight: normal;
+    font-size: 135%;
+    margin-top: 10px;
+
+
+}
+
+
+/*-Buttons-------------------------------------------*/
+
+.btn:link,
+.btn:visited,
+input[type=submit]:link,
+input[type=submit]:visited {
+    display: inline-block;
+    padding: 20px 30px;
+    font-weight: 300;
+    text-decoration: none;
+    border-radius: 200px;
+    color: white;
+    -webkit-transition: background-color 0.8s, color 0.8s, border 0.8s;
+    transition: background-color 0.8s, color 0.8s, border 0.8s;
+
+
+}
+
+.btn-full:link,
+.btn-full:visited,
+input[type=submit]:link,
+input[type=submit]:visited {
+    background-color: #0984e3;
+    border: 1px solid #0984e3;
+    margin-right: 15px;
+    margin-left: 420px;
+    margin-top: 40px;
+
+}
+
+.btn-ghost:link,
+.btn-ghost:visited {
+    border: 1px solid #0984e3;
+    color: #0984e3;
+
+}
+
+.btn:hover,
+.btn:active,
+input[type=submit]:hover,
+input[type=submit]:active {
+
+    background-color: #065ea2;
+
+}
+
+.btn-full:hover,
+.btn-full:active,
+input[type=submit]:hover,
+input[type=submit]:active {
+    background-color: #065ea2;
+    border: 1px solid #065ea2;
+
+}
+
+.btn-ghost:hover,
+.btn-ghost:active {
+    border: 1px solid #065ea2;
+    color: #fff;
+
+}
+
+.form-button {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    background: #0984e3;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+}
+
+.button {
+    margin: 0 auto 1.25rem auto;
+    padding: 0.25rem;
+
+
+}
+
+.food-btn {
+    padding: 2.8rem;
+    margin-top: 20px;
+    margin-left: 100vh;
+    width: 50vh;
+    display: inline-block;
+    background-color: #0984e3;
+    color: white;
+    border: none;
+    text-align: center;
+
+}
+
+
+/* ---------------------------------------------------------*/
+/* REUSABLE COMPONENTS End */
+/*----------------------------------------------------------*/
+
+.shadow {
+
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 8px 0px;
+    margin-top: 60px;
+
+}
+
+/* ---------------------------------------------------------*/
+/* Header */
+/*----------------------------------------------------------*/
+
+header {
+    background-image: url('fitness\ illustration.jpg');
+    background-position: contain;
+    background-size: cover;
+    height: 100vh;
+    width: 130vh;
+    margin-left: 80vh;
+
+}
+
+.hero-text-box {
+    position: absolute;
+    width: 150vh;
+    top: 37%;
+    left: 13%;
+    transform: translate(-45%, -50%);
+    text-align: center;
+
+}
+
+
+
+/*--------------------------main-nav------------------------*/
+
+.main-nav {
+    list-style: none;
+    position: fixed;
+    min-height: 50px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.main-nav li {
+    display: inline-block;
+    margin-left: 70px;
+    margin-top: 25px;
+    padding-bottom: 25px;
+
+
+}
+
+
+
+
+.main-nav li a:link,
+.main-nav li a:visited {
+    padding: 6px 0px;
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    font-size: 125%;
+    border-bottom: 2px solid transparent;
+    -webkit-transition: border-bottom 0.4s font-size 4s;
+    transition: border-bottom 0.4s font-size 4s;
+}
+
+.main-nav li a:hover,
+.main-nav li a:active {
+    font-size: 150%;
+    border-bottom: 2px solid #0984e3;
+
+}
+
+
+/* ---------------------------------------------------------*/
+/* Form Section */
+/*----------------------------------------------------------*/
+
+
+
+
+.form-description {
+    text-align: center;
+    font-style: italic;
+
+}
+
+
+.form-box {
+    max-width: 50%;
+    margin-left: 25%;
+    margin-top: 80px;
+    padding: 40px 60px;
+
+}
+
+#survey {
+    color: white;
+}
+
+input[type=text],
+input[type=email],
+select,
+textarea {
+    width: 80%;
+    padding: 7px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+
+textarea {
+    height: 100px;
+}
+
+input[type=checkbox] {
+    margin: 10px 5px 10px 0;
+}
+
+.input-radio,
+.input-checkbox {
+    display: inline-block;
+    margin-right: 0.725rem;
+    min-height: 1.25rem;
+    min-width: 1.25rem;
+    margin-top: 0.725rem;
+    margin-bottom: 0.725rem;
+    width: 20px;
+
+
+}
+
+label {
+    display: flex;
+    align-items: center;
+    font-size: 1.125rem;
+    margin-bottom: 0.5rem;
+}
+
+
+/* ---------------------------------------------------------*/
+/* Form Section- End */
+/*----------------------------------------------------------*/
+
+/* ---------------------------------------------------------*/
+/* Food-Log */
+/*----------------------------------------------------------*/
+
+.Food-Log {
+    background-image: url('healthy_food.jpg');
+    background-size: contain;
+    background-position: center;
+    height: 60vh;
+    width: 80vh;
+    position: absolute;
+
+}
+
+.food-list li {
+    list-style: none;
+    position: relative;
+    max-height: 20vh;
+    display: inline-block;
+
+}
+
+.food-list :first-child {
+    margin-top: 500px;
+}
