@@ -212,24 +212,18 @@ input[type=submit]:active {
 
 }
 
-.food-btn {
-    padding: 2.8rem;
-    margin-top: 20px;
-    margin-left: 100vh;
-    width: 50vh;
-    display: inline-block;
-    color: black;
-    text-align: center;
-    transition: background-color 0.5s, color 0.8s, border 0.4s;
-    background-image: url("abstract running.jpg");
-    background-size: unset;
+.food-btn:link,
+.food-btn:visited {
 
+    transition: background-color 0.5s, color 0.8s, border 0.4s;
+    margin-left: 15px;
 
 }
 
 .food-btn:hover,
 .food-btn:active {
     border: 5px solid #0984e3;
+    color: white;
 
 }
 
@@ -279,6 +273,7 @@ header {
     min-height: 50px;
     box-sizing: border-box;
     width: 100%;
+    z-index: 999;
 }
 
 .landing-nav li,
@@ -424,26 +419,39 @@ label {
 /* Food-Log */
 /*----------------------------------------------------------*/
 
-.Food-Log {
-    background-image: url('healthy_food.jpg');
-    background-size: contain;
-    background-position: center;
-    height: 60vh;
-    width: 80vh;
-    position: absolute;
+.food-box {
+    padding: 50px;
+    text-align: center;
+    background-color: #0984e3;
+    color: rgb(209, 209, 209);
+
 
 }
 
-.food-list li {
-    list-style: none;
-    position: relative;
-    max-height: 20vh;
-    display: inline-block;
+
+
+.food-log-section {
+    height: 100vh;
+    width: 100%;
+}
+
+.food-background-container {
+    background-image: url(Chinese-food.jpg);
+    background-size: cover;
+    height: 300px;
+    width: 300px;
+    margin-left: 5%;
 
 }
 
-.food-list :first-child {
-    margin-top: 500px;
+.food-background-container2 {
+    background-image: url(Healthy-meal.png);
+    background-size: cover;
+    top: 67%;
+    left: 13%;
+    transform: translate(610%, -10%);
+    height: 350px;
+    width: 350px;
 }
 
 /* ------------------------------------------------------*/
