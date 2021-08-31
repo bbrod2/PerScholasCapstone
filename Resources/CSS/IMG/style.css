@@ -205,12 +205,16 @@ input[type=submit]:active {
     border: none;
 }
 
+
+
 .button {
-    margin: 5.25rem auto 1.25rem auto;
+    margin: 3.25rem auto 1.25rem auto;
     padding: 0.25rem;
 
 
 }
+
+
 
 .food-btn:link,
 .food-btn:visited {
@@ -453,6 +457,53 @@ label {
     height: 350px;
     width: 350px;
 }
+
+/* ---------------------------------------------------------*/
+/* Login */
+/*----------------------------------------------------------*/
+
+.login-pic {
+    background-image: url(login-2.png);
+    background-size: contain;
+    height: 40vh;
+    width: 50%;
+    padding-top: 50px;
+    margin: 0px;
+
+
+
+
+}
+
+.login-side {
+    background-color: rgb(214, 214, 214);
+    background-size: cover;
+    padding: 0px;
+    margin: 0px;
+    width: 50%;
+    height: 60vh;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* ------------------------------------------------------*/
 /* Footer */
