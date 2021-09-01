@@ -231,6 +231,35 @@ input[type=submit]:active {
 
 }
 
+.login-button,
+.login-button:link,
+.login-button:visited {
+    width: 100%;
+    display: block;
+    padding: 0.75rem;
+    background: #00b894;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    margin: 1.25rem auto 1.25rem auto;
+
+}
+
+.login-button:hover,
+.login-button:active {
+    width: 100%;
+    display: block;
+    padding: 0.75rem;
+    background: #00745d;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    margin: 1.25rem auto 1.25rem auto;
+
+}
+
 
 /* ---------------------------------------------------------*/
 /* REUSABLE COMPONENTS End */
@@ -373,6 +402,7 @@ header {
     color: white;
 }
 
+input[type=password],
 input[type=text],
 input[type=email],
 select,
@@ -465,45 +495,64 @@ label {
 .login-pic {
     background-image: url(login-2.png);
     background-size: contain;
-    height: 40vh;
+    background-repeat: no-repeat;
+    height: 200vh;
     width: 50%;
-    padding-top: 50px;
     margin: 0px;
-
-
-
+    zoom: 20%;
+    padding: 100px;
+    transform: translateY(25%);
 
 }
 
 .login-side {
-    background-color: rgb(214, 214, 214);
+    background-color: #0984e3;
     background-size: cover;
-    padding: 0px;
+    background-position: center;
+    padding: 100px;
     margin: 0px;
     width: 50%;
     height: 60vh;
 }
 
+.login-section {
+    background: linear-gradient(190deg, rgba(190, 190, 190, 0.2), #065ea2);
+    /*   background-image: url(login-illone.png); */
+    background-size: cover;
+    height: 100vh;
+    background-position: right;
+
+}
 
 
 
+.login-title {
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 155%;
+    text-align: center;
+    margin-left: 100px;
+    margin-top: 110px;
+    margin-bottom: 10px;
+
+}
+
+.sign-up-link,
+.sign-up-visited {
+    color: white;
+    margin-left: 45px;
+    word-spacing: 1.5px;
+}
+
+.sign-up-link:hover,
+.sign-up-link:active {
+    color: white;
+    padding-bottom: 5px;
+    border-bottom: solid #00745d;
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
 
 /* ------------------------------------------------------*/
 /* Footer */
