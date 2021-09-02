@@ -614,19 +614,45 @@ label {
 /* ------------------------------------------------------*/
 /* Stop-page */
 /*----------------------------------------------------------*/
-.stop {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(istock-cimmerian-56a6f72c5f9b58b7d0e5baa8.jpg);
-    background-repeat: none;
-    background-size: cover;
-    height: 100vh;
 
+
+/* linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), */
+.stop-header {
+    color: black;
+    font-weight: bold;
+    font-size: 280%;
+    text-align: center;
+    text-transform: uppercase;
+    word-spacing: 4px;
+    margin-top: -30vh;
+    max-width: 75%;
+    margin-left: 10%;
 
 }
 
-.stop-header {
-    color: white;
-    font-weight: 300;
+.stop-description {
+    color: black;
+    text-align: center;
+    font-size: 150%;
+    margin-top: 15px;
+    max-width: 70%;
+    margin-left: 12%;
+}
 
+.stop-logo {
+    transform: translate(-270%, -39%);
+    height: 37vh;
+}
+
+.heart-background {
+    height: 100vh;
+    transform: translate(40%, 30%);
+
+}
+
+.text-container {
+    transform: translate(-100%, 0%);
+    margin-top: 20vh;
 }
 
 /* ------------------------------------------------------*/
