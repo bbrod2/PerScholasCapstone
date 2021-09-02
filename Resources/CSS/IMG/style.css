@@ -291,9 +291,20 @@ header {
     width: 150vh;
     top: 37%;
     left: 13%;
-    transform: translate(-45%, -50%);
+    transform: translate(-43%, -38%);
     text-align: center;
 
+}
+
+.main-logo {
+    height: 35vh;
+    transform: translate(-220%, -37%);
+}
+
+.nav-logo {
+    height: 20vh;
+    margin-top: -160px;
+    margin-bottom: -120px;
 }
 
 
@@ -534,7 +545,7 @@ label {
     font-size: 155%;
     text-align: center;
     margin-left: 100px;
-    margin-top: 110px;
+    margin-top: -40px;
     margin-bottom: 10px;
 
 }
@@ -576,6 +587,14 @@ label {
 
 }
 
+.login-logo {
+    height: 45vh;
+    margin-bottom: 0;
+    margin-top: -290px;
+    margin-left: -100px;
+    margin-bottom: -120px;
+}
+
 /* ---------------------------------------------------------*/
 /* Sign-up */
 /*----------------------------------------------------------*/
@@ -587,15 +606,28 @@ label {
     font-size: 155%;
     text-align: center;
     margin-left: 60px;
-    margin-top: 80px;
-    margin-bottom: 10px;
+    margin-top: -480px;
+    margin-bottom: -420px;
 
 }
 
 /* ------------------------------------------------------*/
 /* Stop-page */
 /*----------------------------------------------------------*/
+.stop {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(istock-cimmerian-56a6f72c5f9b58b7d0e5baa8.jpg);
+    background-repeat: none;
+    background-size: cover;
+    height: 100vh;
 
+
+}
+
+.stop-header {
+    color: white;
+    font-weight: 300;
+
+}
 
 /* ------------------------------------------------------*/
 /* Footer */
@@ -606,6 +638,7 @@ footer {
     padding: 50px;
     font-size: 90%;
     background-attachment: fixed;
+    overflow: hidden;
 }
 
 .footer-nav {
