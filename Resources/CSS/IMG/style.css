@@ -580,8 +580,7 @@ label {
 .sign-up-link1:hover,
 .sign-up-link1:active {
     color: white;
-    padding-bottom: 5px;
-    border-bottom: solid #00745d;
+    text-decoration: underline;
 
 
 
@@ -654,6 +653,57 @@ label {
     transform: translate(-100%, 0%);
     margin-top: 20vh;
 }
+
+/* ------------------------------------------------------*/
+/* profile-page */
+/*----------------------------------------------------------*/
+
+.profile-section {
+    background-color: #f5f8fc;
+    background-size: cover;
+}
+
+.outerprofile {
+    max-width: 33%;
+    margin-left: 33.33%;
+    margin-top: 10%;
+    padding-top: 20vh;
+    padding-bottom: 20vh;
+    box-shadow: rgba(115, 162, 212, 0.6) 2px 2px 5px 2px;
+    background-color: #e8f0f8;
+}
+
+.info-container {
+    padding-top: 8vh;
+    padding-bottom: 8vh;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+
+    background-color: #fff;
+
+}
+
+.info {
+    flex: 1 1 50%;
+    min-height: 100px;
+    padding: 7vh;
+}
+
+.Q1 {
+    border-right: 1px solid;
+    border-bottom: 1px solid;
+}
+
+.Q2 {
+    border-bottom: 1px solid;
+}
+
+.Q3 {
+    border-right: 1px solid;
+}
+
+
 
 /* ------------------------------------------------------*/
 /* Footer */
