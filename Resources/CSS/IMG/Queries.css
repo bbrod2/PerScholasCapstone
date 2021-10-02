@@ -192,7 +192,7 @@
 
 
 /*Big tablet to 2000px (widths smaller than the 1140px row)*/
-@media only screen and (max-width:1450px) {
+@media only screen and (max-width:1400px) {
     h1 {
 
         font-size: 330%;
@@ -319,7 +319,7 @@
     }
 }
 
-@media only screen and (max-width:1348px) {
+@media only screen and (max-width:1380px) {
 
     h1 {
 
@@ -389,8 +389,9 @@
 
     .sign-up-title {
 
-        margin-top: -58px;
+        margin-top: -50px;
         margin-bottom: 0px;
+
 
     }
 
@@ -398,6 +399,9 @@
         margin-bottom: -50px;
         margin-top: -200px;
         margin-left: -100px;
+
+
+
 
     }
 
