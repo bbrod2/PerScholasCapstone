@@ -65,5 +65,102 @@ age.addEventListener('submit', validateAge);
 /*--------------sign-up-form-end-----------------*/
 /*-----------------------------------------------------*/
 
+/*------------------------------------------------------*/
+/*--------------FoodLog-Start-----------------*/
+/*-----------------------------------------------------*/
 
 
+function displayDayOne() {
+   
+    document.getElementById("dayOneInfo").style.display = "block";
+    document.getElementById("dayTwoInfo").style.display = "none";
+    document.getElementById("dayThreeInfo").style.display = "none";
+    document.getElementById("dayFourInfo").style.display = "none";
+    document.getElementById("dayFiveInfo").style.display = "none";
+    document.getElementById("daySixInfo").style.display = "none";
+    document.getElementById("daySevenInfo").style.display = "none";
+
+}
+
+function displayDayTwo() {
+   
+    document.getElementById("dayOneInfo").style.display = "none";
+    document.getElementById("dayTwoInfo").style.display = "block";
+    document.getElementById("dayThreeInfo").style.display = "none";
+    document.getElementById("dayFourInfo").style.display = "none";
+    document.getElementById("dayFiveInfo").style.display = "none";
+    document.getElementById("daySixInfo").style.display = "none";
+    document.getElementById("daySevenInfo").style.display = "none";
+
+
+
+}
+
+function displayDayThree() {
+    document.getElementById("dayOneInfo").style.display = "none";
+    document.getElementById("dayTwoInfo").style.display = "none";
+    document.getElementById("dayThreeInfo").style.display = "block";
+    document.getElementById("dayFourInfo").style.display = "none";
+    document.getElementById("dayFiveInfo").style.display = "none";
+    document.getElementById("daySixInfo").style.display = "none";
+    document.getElementById("daySevenInfo").style.display = "none";
+
+}
+
+function displayDayFour() {
+    document.getElementById("dayOneInfo").style.display = "none";
+    document.getElementById("dayTwoInfo").style.display = "none";
+    document.getElementById("dayThreeInfo").style.display = "none";
+    document.getElementById("dayFourInfo").style.display = "block";
+    document.getElementById("dayFiveInfo").style.display = "none";
+    document.getElementById("daySixInfo").style.display = "none";
+    document.getElementById("daySevenInfo").style.display = "none";
+
+}
+
+
+function displayDayFive() {
+    document.getElementById("dayOneInfo").style.display = "none";
+    document.getElementById("dayTwoInfo").style.display = "none";
+    document.getElementById("dayThreeInfo").style.display = "none";
+    document.getElementById("dayFourInfo").style.display = "none";
+    document.getElementById("dayFiveInfo").style.display = "block";
+    document.getElementById("daySixInfo").style.display = "none";
+    document.getElementById("daySevenInfo").style.display = "none";
+
+}
+
+function displayDaySix() {
+    document.getElementById("dayOneInfo").style.display = "none";
+    document.getElementById("dayTwoInfo").style.display = "none";
+    document.getElementById("dayThreeInfo").style.display = "none";
+    document.getElementById("dayFourInfo").style.display = "none";
+    document.getElementById("dayFiveInfo").style.display = "none";
+    document.getElementById("daySixInfo").style.display = "block";
+    document.getElementById("daySevenInfo").style.display = "none";
+
+}
+
+function displayDaySeven() {
+    document.getElementById("dayOneInfo").style.display = "none";
+    document.getElementById("dayTwoInfo").style.display = "none";
+    document.getElementById("dayThreeInfo").style.display = "none";
+    document.getElementById("dayFourInfo").style.display = "none";
+    document.getElementById("dayFiveInfo").style.display = "none";
+    document.getElementById("daySixInfo").style.display = "none";
+    document.getElementById("daySevenInfo").style.display = "block";
+}
+
+
+
+
+{/* <h2 id="header">:</h2>
+            <h2 id="header"></h2>
+            <h2 id="header"></h2>
+            <h2 id="header"></h2>
+            <h2 id="header"></h2>
+            <h2 id="header"></h2>
+ */}
+/*------------------------------------------------------*/
+/*--------------FoodLog-End-----------------*/
+/*-----------------------------------------------------*/

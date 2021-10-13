@@ -11,6 +11,8 @@
         rel="stylesheet">
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script type="text/javascript" src="Resources/JAVA/script.JS"></script>
+
 </head>
 
 <body>
@@ -36,49 +38,49 @@
         <div class="row food-btn-container">
 
 
-            <div class="col span-1-of-7 food-box shadow">
+            <div class="col span-1-of-7 food-box shadow" onclick="displayDayOne()">
                 <a class="food-btn">
                     <p>Day 1</p>
                 </a>
             </div>
 
 
-            <div class="col span-1-of-7  food-box shadow">
+            <div class="col span-1-of-7  food-box shadow" onclick="displayDayTwo()">
                 <a class="food-btn">
                     <p>Day 2</p>
                 </a>
             </div>
 
 
-            <div class="col span-1-of-7  food-box shadow">
+            <div class="col span-1-of-7  food-box shadow" onclick="displayDayThree()">
                 <a class="food-btn">
                     <p>Day 3</p>
                 </a>
             </div>
 
 
-            <div class="col span-1-of-7  food-box shadow">
+            <div class="col span-1-of-7  food-box shadow " onclick="displayDayFour()">
                 <a class="food-btn">
                     <p>Day 4</p>
                 </a>
             </div>
 
 
-            <div class="col span-1-of-7 food-box shadow">
+            <div class="col span-1-of-7 food-box shadow" onclick="displayDayFive()">
                 <a class="food-btn">
                     <p>Day 5</p>
                 </a>
             </div>
 
 
-            <div class="col span-1-of-7  food-box shadow">
+            <div class="col span-1-of-7  food-box shadow" onclick="displayDaySix()">
                 <a class="food-btn">
                     <p>Day 6</p>
                 </a>
             </div>
 
 
-            <div class="col span-1-of-7 food-box shadow">
+            <div class="col span-1-of-7 food-box shadow" onclick="displayDaySeven()">
                 <a class="food-btn">
                     <p> Day 7</p>
                 </a>
@@ -89,10 +91,16 @@
             <p> </p>
         </div>
     </section>
-    <section class="table-section">
+    <!-- /*------------------------------------------------------*/
+    /*--------------DayOne-----------------*/
+    /*-----------------------------------------------------*/ -->
+
+    <section class="table-section" id="dayOneInfo" style="display: none;">
         <div>
             <h2>Day 1:</h2>
-            <p class="form-description" style=" text-align: center;">Track Your Calorie In-take for 7-Days!</p>
+            <p class="form-description" style=" text-align: center;" id="sub-header">Track Your Calorie
+                In-take for
+                7-Days!</p>
         </div>
         <table class="button1-table">
             <tbody>
@@ -230,7 +238,999 @@
             </tbody>
         </table>
 
+        <table class="dummy-table row shadow ">
+            <thead>
+                <tr>
+                    <th>Snack Item:</th>
+                    <th>Quantity:</th>
+                    <th>Calories:</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Zach</td>
+                    <td> 150 </td>
+                    <td> Healthy</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </section>
+
+    <!-- /*------------------------------------------------------*/
+    /*--------------DayTwo-----------------*/
+    /*-----------------------------------------------------*/ -->
+
+    <section class="table-section" id="dayTwoInfo" style="display: none;">
+        <div>
+            <h2>Day 2:</h2>
+            <p class="form-description" style=" text-align: center;" id="sub-header">Track Your Calorie
+                In-take for
+                7-Days!</p>
+        </div>
+        <table class="button1-table">
+            <tbody>
+                <tr>
+                    <td>
+                        <h3>Show All Tables:</h3>
+                    </td>
+                    <td>
+                        <ion-icon name="add-circle-outline" class="add-circle"></ion-icon>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table class="button-table">
+            <tbody>
+                <tr>
+                    <td>
+                        <h3>Show Breakfast Item:</h3>
+                    </td>
+                    <td>
+                        <ion-icon name="add-circle" class="add-circle"></ion-icon>
+                    </td>
+                    <td>
+                        <h3>Add Breakfast Item:</h3>
+                    </td>
+                    <td>
+                        <ion-icon name="add-circle" class="add-circle"></ion-icon>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
         <table class="dummy-table row shadow">
+            <thead>
+                <tr>
+                    <th>Breakfast Item:</th>
+                    <th>Quantity:</th>
+                    <th>Calories:</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Zach</td>
+                    <td> 150 </td>
+                    <td> Healthy</td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="button-table">
+            <tbody>
+                <tr>
+                    <td>
+                        <h3>Show Lunch Item:</h3>
+                    </td>
+                    <td>
+                        <ion-icon name="add-circle" class="add-circle"></ion-icon>
+                    </td>
+                    <td>
+                        <h3>Add Lunch Item:</h3>
+                    </td>
+                    <td>
+                        <ion-icon name="add-circle" class="add-circle"></ion-icon>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="dummy-table row shadow">
+            <thead>
+                <tr>
+                    <th>Lunch Item:</th>
+                    <th>Quantity:</th>
+                    <th>Calories:</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Zach</td>
+                    <td> 150 </td>
+                    <td> Healthy</td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="button-table">
+            <tbody>
+                <tr>
+                    <td>
+                        <h3>Show Dinner Item:</h3>
+                    </td>
+                    <td>
+                        <ion-icon name="add-circle" class="add-circle"></ion-icon>
+                    </td>
+                    <td>
+                        <h3>Add Dinner Item:</h3>
+                    </td>
+                    <td>
+                        <ion-icon name="add-circle" class="add-circle"></ion-icon>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="dummy-table row shadow">
+            <thead>
+                <tr>
+                    <th>Dinner Item:</th>
+                    <th>Quantity:</th>
+                    <th>Calories:</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Zach</td>
+                    <td> 150 </td>
+                    <td> Healthy</td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="button-table">
+            <tbody>
+                <tr>
+                    <td>
+                        <h3>Show Snack Item:</h3>
+                    </td>
+                    <td>
+                        <ion-icon name="add-circle" class="add-circle"></ion-icon>
+                    </td>
+                    <td>
+                        <h3>Add Snack Item:</h3>
+                    </td>
+                    <td>
+                        <ion-icon name="add-circle" class="add-circle"></ion-icon>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table class="dummy-table row shadow ">
+            <thead>
+                <tr>
+                    <th>Snack Item:</th>
+                    <th>Quantity:</th>
+                    <th>Calories:</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Zach</td>
+                    <td> 150 </td>
+                    <td> Healthy</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </section>
+    <!-- /*------------------------------------------------------*/
+    /*--------------DayThree-----------------*/
+    /*-----------------------------------------------------*/ -->
+
+    <section class="table-section" id="dayThreeInfo" style="display: none;">
+        <div>
+            <h2>Day 3:</h2>
+            <p class="form-description" style=" text-align: center;" id="sub-header">Track Your Calorie
+                In-take for
+                7-Days!</p>
+        </div>
+        <table class="button1-table">
+            <tbody>
+                <tr>
+                    <td>
+                        <h3>Show All Tables:</h3>
+                    </td>
+                    <td>
+                        <ion-icon name="add-circle-outline" class="add-circle"></ion-icon>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table class="button-table">
+            <tbody>
+                <tr>
+                    <td>
+                        <h3>Show Breakfast Item:</h3>
+                    </td>
+                    <td>
+                        <ion-icon name="add-circle" class="add-circle"></ion-icon>
+                    </td>
+                    <td>
+                        <h3>Add Breakfast Item:</h3>
+                    </td>
+                    <td>
+                        <ion-icon name="add-circle" class="add-circle"></ion-icon>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table class="dummy-table row shadow">
+            <thead>
+                <tr>
+                    <th>Breakfast Item:</th>
+                    <th>Quantity:</th>
+                    <th>Calories:</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Zach</td>
+                    <td> 150 </td>
+                    <td> Healthy</td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="button-table">
+            <tbody>
+                <tr>
+                    <td>
+                        <h3>Show Lunch Item:</h3>
+                    </td>
+                    <td>
+                        <ion-icon name="add-circle" class="add-circle"></ion-icon>
+                    </td>
+                    <td>
+                        <h3>Add Lunch Item:</h3>
+                    </td>
+                    <td>
+                        <ion-icon name="add-circle" class="add-circle"></ion-icon>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="dummy-table row shadow">
+            <thead>
+                <tr>
+                    <th>Lunch Item:</th>
+                    <th>Quantity:</th>
+                    <th>Calories:</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Zach</td>
+                    <td> 150 </td>
+                    <td> Healthy</td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="button-table">
+            <tbody>
+                <tr>
+                    <td>
+                        <h3>Show Dinner Item:</h3>
+                    </td>
+                    <td>
+                        <ion-icon name="add-circle" class="add-circle"></ion-icon>
+                    </td>
+                    <td>
+                        <h3>Add Dinner Item:</h3>
+                    </td>
+                    <td>
+                        <ion-icon name="add-circle" class="add-circle"></ion-icon>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="dummy-table row shadow">
+            <thead>
+                <tr>
+                    <th>Dinner Item:</th>
+                    <th>Quantity:</th>
+                    <th>Calories:</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Zach</td>
+                    <td> 150 </td>
+                    <td> Healthy</td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="button-table">
+            <tbody>
+                <tr>
+                    <td>
+                        <h3>Show Snack Item:</h3>
+                    </td>
+                    <td>
+                        <ion-icon name="add-circle" class="add-circle"></ion-icon>
+                    </td>
+                    <td>
+                        <h3>Add Snack Item:</h3>
+                    </td>
+                    <td>
+                        <ion-icon name="add-circle" class="add-circle"></ion-icon>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table class="dummy-table row shadow ">
+            <thead>
+                <tr>
+                    <th>Snack Item:</th>
+                    <th>Quantity:</th>
+                    <th>Calories:</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Zach</td>
+                    <td> 150 </td>
+                    <td> Healthy</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </section>
+    <!-- /*------------------------------------------------------*/
+    /*--------------DayFour-----------------*/
+    /*-----------------------------------------------------*/ -->
+
+    <section class="table-section" id="dayFourInfo" style="display: none;">
+        <div>
+            <h2>Day 4:</h2>
+            <p class="form-description" style=" text-align: center;" id="sub-header">Track Your Calorie
+                In-take for
+                7-Days!</p>
+        </div>
+        <table class="button1-table">
+            <tbody>
+                <tr>
+                    <td>
+                        <h3>Show All Tables:</h3>
+                    </td>
+                    <td>
+                        <ion-icon name="add-circle-outline" class="add-circle"></ion-icon>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table class="button-table">
+            <tbody>
+                <tr>
+                    <td>
+                        <h3>Show Breakfast Item:</h3>
+                    </td>
+                    <td>
+                        <ion-icon name="add-circle" class="add-circle"></ion-icon>
+                    </td>
+                    <td>
+                        <h3>Add Breakfast Item:</h3>
+                    </td>
+                    <td>
+                        <ion-icon name="add-circle" class="add-circle"></ion-icon>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table class="dummy-table row shadow">
+            <thead>
+                <tr>
+                    <th>Breakfast Item:</th>
+                    <th>Quantity:</th>
+                    <th>Calories:</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Zach</td>
+                    <td> 150 </td>
+                    <td> Healthy</td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="button-table">
+            <tbody>
+                <tr>
+                    <td>
+                        <h3>Show Lunch Item:</h3>
+                    </td>
+                    <td>
+                        <ion-icon name="add-circle" class="add-circle"></ion-icon>
+                    </td>
+                    <td>
+                        <h3>Add Lunch Item:</h3>
+                    </td>
+                    <td>
+                        <ion-icon name="add-circle" class="add-circle"></ion-icon>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="dummy-table row shadow">
+            <thead>
+                <tr>
+                    <th>Lunch Item:</th>
+                    <th>Quantity:</th>
+                    <th>Calories:</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Zach</td>
+                    <td> 150 </td>
+                    <td> Healthy</td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="button-table">
+            <tbody>
+                <tr>
+                    <td>
+                        <h3>Show Dinner Item:</h3>
+                    </td>
+                    <td>
+                        <ion-icon name="add-circle" class="add-circle"></ion-icon>
+                    </td>
+                    <td>
+                        <h3>Add Dinner Item:</h3>
+                    </td>
+                    <td>
+                        <ion-icon name="add-circle" class="add-circle"></ion-icon>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="dummy-table row shadow">
+            <thead>
+                <tr>
+                    <th>Dinner Item:</th>
+                    <th>Quantity:</th>
+                    <th>Calories:</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Zach</td>
+                    <td> 150 </td>
+                    <td> Healthy</td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="button-table">
+            <tbody>
+                <tr>
+                    <td>
+                        <h3>Show Snack Item:</h3>
+                    </td>
+                    <td>
+                        <ion-icon name="add-circle" class="add-circle"></ion-icon>
+                    </td>
+                    <td>
+                        <h3>Add Snack Item:</h3>
+                    </td>
+                    <td>
+                        <ion-icon name="add-circle" class="add-circle"></ion-icon>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table class="dummy-table row shadow ">
+            <thead>
+                <tr>
+                    <th>Snack Item:</th>
+                    <th>Quantity:</th>
+                    <th>Calories:</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Zach</td>
+                    <td> 150 </td>
+                    <td> Healthy</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </section>
+
+    <!-- /*------------------------------------------------------*/
+    /*--------------DayFive-----------------*/
+    /*-----------------------------------------------------*/ -->
+
+    <section class="table-section" id="dayFiveInfo" style="display: none;">
+        <div>
+            <h2>Day 5:</h2>
+            <p class="form-description" style=" text-align: center;" id="sub-header">Track Your Calorie
+                In-take for
+                7-Days!</p>
+        </div>
+        <table class="button1-table">
+            <tbody>
+                <tr>
+                    <td>
+                        <h3>Show All Tables:</h3>
+                    </td>
+                    <td>
+                        <ion-icon name="add-circle-outline" class="add-circle"></ion-icon>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table class="button-table">
+            <tbody>
+                <tr>
+                    <td>
+                        <h3>Show Breakfast Item:</h3>
+                    </td>
+                    <td>
+                        <ion-icon name="add-circle" class="add-circle"></ion-icon>
+                    </td>
+                    <td>
+                        <h3>Add Breakfast Item:</h3>
+                    </td>
+                    <td>
+                        <ion-icon name="add-circle" class="add-circle"></ion-icon>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table class="dummy-table row shadow">
+            <thead>
+                <tr>
+                    <th>Breakfast Item:</th>
+                    <th>Quantity:</th>
+                    <th>Calories:</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Zach</td>
+                    <td> 150 </td>
+                    <td> Healthy</td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="button-table">
+            <tbody>
+                <tr>
+                    <td>
+                        <h3>Show Lunch Item:</h3>
+                    </td>
+                    <td>
+                        <ion-icon name="add-circle" class="add-circle"></ion-icon>
+                    </td>
+                    <td>
+                        <h3>Add Lunch Item:</h3>
+                    </td>
+                    <td>
+                        <ion-icon name="add-circle" class="add-circle"></ion-icon>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="dummy-table row shadow">
+            <thead>
+                <tr>
+                    <th>Lunch Item:</th>
+                    <th>Quantity:</th>
+                    <th>Calories:</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Zach</td>
+                    <td> 150 </td>
+                    <td> Healthy</td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="button-table">
+            <tbody>
+                <tr>
+                    <td>
+                        <h3>Show Dinner Item:</h3>
+                    </td>
+                    <td>
+                        <ion-icon name="add-circle" class="add-circle"></ion-icon>
+                    </td>
+                    <td>
+                        <h3>Add Dinner Item:</h3>
+                    </td>
+                    <td>
+                        <ion-icon name="add-circle" class="add-circle"></ion-icon>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="dummy-table row shadow">
+            <thead>
+                <tr>
+                    <th>Dinner Item:</th>
+                    <th>Quantity:</th>
+                    <th>Calories:</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Zach</td>
+                    <td> 150 </td>
+                    <td> Healthy</td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="button-table">
+            <tbody>
+                <tr>
+                    <td>
+                        <h3>Show Snack Item:</h3>
+                    </td>
+                    <td>
+                        <ion-icon name="add-circle" class="add-circle"></ion-icon>
+                    </td>
+                    <td>
+                        <h3>Add Snack Item:</h3>
+                    </td>
+                    <td>
+                        <ion-icon name="add-circle" class="add-circle"></ion-icon>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table class="dummy-table row shadow ">
+            <thead>
+                <tr>
+                    <th>Snack Item:</th>
+                    <th>Quantity:</th>
+                    <th>Calories:</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Zach</td>
+                    <td> 150 </td>
+                    <td> Healthy</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </section>
+    <!-- /*------------------------------------------------------*/
+    /*--------------DaySix-----------------*/
+    /*-----------------------------------------------------*/ -->
+
+    <section class="table-section" id="daySixInfo" style="display: none;">
+        <div>
+            <h2>Day 6:</h2>
+            <p class="form-description" style=" text-align: center;" id="sub-header">Track Your Calorie
+                In-take for
+                7-Days!</p>
+        </div>
+        <table class="button1-table">
+            <tbody>
+                <tr>
+                    <td>
+                        <h3>Show All Tables:</h3>
+                    </td>
+                    <td>
+                        <ion-icon name="add-circle-outline" class="add-circle"></ion-icon>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table class="button-table">
+            <tbody>
+                <tr>
+                    <td>
+                        <h3>Show Breakfast Item:</h3>
+                    </td>
+                    <td>
+                        <ion-icon name="add-circle" class="add-circle"></ion-icon>
+                    </td>
+                    <td>
+                        <h3>Add Breakfast Item:</h3>
+                    </td>
+                    <td>
+                        <ion-icon name="add-circle" class="add-circle"></ion-icon>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table class="dummy-table row shadow">
+            <thead>
+                <tr>
+                    <th>Breakfast Item:</th>
+                    <th>Quantity:</th>
+                    <th>Calories:</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Zach</td>
+                    <td> 150 </td>
+                    <td> Healthy</td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="button-table">
+            <tbody>
+                <tr>
+                    <td>
+                        <h3>Show Lunch Item:</h3>
+                    </td>
+                    <td>
+                        <ion-icon name="add-circle" class="add-circle"></ion-icon>
+                    </td>
+                    <td>
+                        <h3>Add Lunch Item:</h3>
+                    </td>
+                    <td>
+                        <ion-icon name="add-circle" class="add-circle"></ion-icon>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="dummy-table row shadow">
+            <thead>
+                <tr>
+                    <th>Lunch Item:</th>
+                    <th>Quantity:</th>
+                    <th>Calories:</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Zach</td>
+                    <td> 150 </td>
+                    <td> Healthy</td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="button-table">
+            <tbody>
+                <tr>
+                    <td>
+                        <h3>Show Dinner Item:</h3>
+                    </td>
+                    <td>
+                        <ion-icon name="add-circle" class="add-circle"></ion-icon>
+                    </td>
+                    <td>
+                        <h3>Add Dinner Item:</h3>
+                    </td>
+                    <td>
+                        <ion-icon name="add-circle" class="add-circle"></ion-icon>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="dummy-table row shadow">
+            <thead>
+                <tr>
+                    <th>Dinner Item:</th>
+                    <th>Quantity:</th>
+                    <th>Calories:</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Zach</td>
+                    <td> 150 </td>
+                    <td> Healthy</td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="button-table">
+            <tbody>
+                <tr>
+                    <td>
+                        <h3>Show Snack Item:</h3>
+                    </td>
+                    <td>
+                        <ion-icon name="add-circle" class="add-circle"></ion-icon>
+                    </td>
+                    <td>
+                        <h3>Add Snack Item:</h3>
+                    </td>
+                    <td>
+                        <ion-icon name="add-circle" class="add-circle"></ion-icon>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table class="dummy-table row shadow ">
+            <thead>
+                <tr>
+                    <th>Snack Item:</th>
+                    <th>Quantity:</th>
+                    <th>Calories:</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Zach</td>
+                    <td> 150 </td>
+                    <td> Healthy</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </section>
+    <!-- /*------------------------------------------------------*/
+    /*--------------DaySeven-----------------*/
+    /*-----------------------------------------------------*/ -->
+
+    <section class="table-section" id="daySevenInfo" style="display: none;">
+        <div>
+            <h2>Day 7:</h2>
+            <p class="form-description" style=" text-align: center;" id="sub-header">Track Your Calorie
+                In-take for
+                7-Days!</p>
+        </div>
+        <table class="button1-table">
+            <tbody>
+                <tr>
+                    <td>
+                        <h3>Show All Tables:</h3>
+                    </td>
+                    <td>
+                        <ion-icon name="add-circle-outline" class="add-circle"></ion-icon>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table class="button-table">
+            <tbody>
+                <tr>
+                    <td>
+                        <h3>Show Breakfast Item:</h3>
+                    </td>
+                    <td>
+                        <ion-icon name="add-circle" class="add-circle"></ion-icon>
+                    </td>
+                    <td>
+                        <h3>Add Breakfast Item:</h3>
+                    </td>
+                    <td>
+                        <ion-icon name="add-circle" class="add-circle"></ion-icon>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table class="dummy-table row shadow">
+            <thead>
+                <tr>
+                    <th>Breakfast Item:</th>
+                    <th>Quantity:</th>
+                    <th>Calories:</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Zach</td>
+                    <td> 150 </td>
+                    <td> Healthy</td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="button-table">
+            <tbody>
+                <tr>
+                    <td>
+                        <h3>Show Lunch Item:</h3>
+                    </td>
+                    <td>
+                        <ion-icon name="add-circle" class="add-circle"></ion-icon>
+                    </td>
+                    <td>
+                        <h3>Add Lunch Item:</h3>
+                    </td>
+                    <td>
+                        <ion-icon name="add-circle" class="add-circle"></ion-icon>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="dummy-table row shadow">
+            <thead>
+                <tr>
+                    <th>Lunch Item:</th>
+                    <th>Quantity:</th>
+                    <th>Calories:</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Zach</td>
+                    <td> 150 </td>
+                    <td> Healthy</td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="button-table">
+            <tbody>
+                <tr>
+                    <td>
+                        <h3>Show Dinner Item:</h3>
+                    </td>
+                    <td>
+                        <ion-icon name="add-circle" class="add-circle"></ion-icon>
+                    </td>
+                    <td>
+                        <h3>Add Dinner Item:</h3>
+                    </td>
+                    <td>
+                        <ion-icon name="add-circle" class="add-circle"></ion-icon>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="dummy-table row shadow">
+            <thead>
+                <tr>
+                    <th>Dinner Item:</th>
+                    <th>Quantity:</th>
+                    <th>Calories:</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Zach</td>
+                    <td> 150 </td>
+                    <td> Healthy</td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="button-table">
+            <tbody>
+                <tr>
+                    <td>
+                        <h3>Show Snack Item:</h3>
+                    </td>
+                    <td>
+                        <ion-icon name="add-circle" class="add-circle"></ion-icon>
+                    </td>
+                    <td>
+                        <h3>Add Snack Item:</h3>
+                    </td>
+                    <td>
+                        <ion-icon name="add-circle" class="add-circle"></ion-icon>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table class="dummy-table row shadow ">
             <thead>
                 <tr>
                     <th>Snack Item:</th>
@@ -272,6 +1272,8 @@
             <p>Copyright &copy; 2021 by Activedo. All rights reserved. </p>
         </div>
     </footer>
+
 </body>
+
 
 </html>

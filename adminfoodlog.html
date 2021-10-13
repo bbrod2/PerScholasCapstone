@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="Vendors/CSS/normalize.css">
+    <link rel="stylesheet" type="text/css" href="Vendors/CSS/grid.css">
+    <link rel="stylesheet" type="text/css" href="Resources/CSS/IMG/style.css">
+    <link rel="stylesheet" type="text/css" href="Resources/CSS/IMG/Queries.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,300&display=swap"
+        rel="stylesheet">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script type="text/javascript" src="Resources/JAVA/script.JS"></script>
+
+</head>
+
+<body>
+    <nav>
+        <div>
+            <ul class="landing-nav">
+                <li><a href="Index.html">Home Page</a></li>
+                <li><a href="profile.html"> Profile</a></li>
+                <li><a href="#"> Log-out</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="food-log-section">
+        <div>
+            <h2>7-Day Food-Log:</h2>
+            <p class="form-description" style=" text-align: center;">Track Your Calorie In-take for 7-Days!</p>
+        </div>
+        <div class=food-background-container>
+            <p> </p>
+        </div>
+
+        <div class="row food-btn-container">
+
+
+            <button class="col span-1-of-7 food-box shadow" id="dayOne" onclick="displayDayOne()">
+                <a class="food-btn">
+                    <p>Day 1</p>
+                </a>
+            </button>
+
+
+            <div class="col span-1-of-7  food-box shadow" id="dayTwo">
+                <a class="food-btn">
+                    <p>Day 2</p>
+                </a>
+            </div>
+
+
+            <div class="col span-1-of-7  food-box shadow" id="dayThree">
+                <a class="food-btn">
+                    <p>Day 3</p>
+                </a>
+            </div>
+
+
+            <div class="col span-1-of-7  food-box shadow " id="dayFour">
+                <a class="food-btn">
+                    <p>Day 4</p>
+                </a>
+            </div>
+
+
+            <div class="col span-1-of-7 food-box shadow" id="dayFive">
+                <a class="food-btn">
+                    <p>Day 5</p>
+                </a>
+            </div>
+
+
+            <div class="col span-1-of-7  food-box shadow" id="daySix">
+                <a class="food-btn">
+                    <p>Day 6</p>
+                </a>
+            </div>
+
+
+            <div class="col span-1-of-7 food-box shadow" id="daySeven">
+                <a class="food-btn">
+                    <p> Day 7</p>
+                </a>
+            </div>
+
+        </div>
+        <div class=food-background-container2>
+            <p> </p>
+        </div>
+    </section>
+    <section class="table-section">
+        <div>
+            <h2 id="header1" style="display: none;">Day 1:</h2>
+            <h2 id="header2" style="display: none;">Day 2:</h2>
+            <h2 id="header3" style="display: none;">Day 3:</h2>
+            <h2 id="header4" style="display: none;">Day 4:</h2>
+            <h2 id="header5" style="display: none;">Day 5:</h2>
+            <h2 id="header6" style="display: none;">Day 6:</h2>
+            <h2 id="header7" style="display: none;">Day 7:</h2>
+            <p class="form-description" style=" text-align: center; display: none;" id="sub-header">Track Your Calorie
+                In-take for
+                7-Days!</p>
+        </div>
+        <table class="button1-table" style="display: none;">
+            <tbody>
+                <tr>
+                    <td>
+                        <h3>Show All Tables:</h3>
+                    </td>
+                    <td>
+                        <ion-icon name="add-circle-outline" class="add-circle"></ion-icon>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table class="button-table">
+            <tbody>
+                <tr>
+                    <td>
+                        <h3>Show Breakfast Item:</h3>
+                    </td>
+                    <td>
+                        <ion-icon name="add-circle" class="add-circle"></ion-icon>
+                    </td>
+                    <td>
+                        <h3>Add Breakfast Item:</h3>
+                    </td>
+                    <td>
+                        <ion-icon name="add-circle" class="add-circle"></ion-icon>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table class="dummy-table row shadow">
+            <thead>
+                <tr>
+                    <th>Breakfast Item:</th>
+                    <th>Quantity:</th>
+                    <th>Calories:</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Zach</td>
+                    <td> 150 </td>
+                    <td> Healthy</td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="button-table">
+            <tbody>
+                <tr>
+                    <td>
+                        <h3>Show Lunch Item:</h3>
+                    </td>
+                    <td>
+                        <ion-icon name="add-circle" class="add-circle"></ion-icon>
+                    </td>
+                    <td>
+                        <h3>Add Lunch Item:</h3>
+                    </td>
+                    <td>
+                        <ion-icon name="add-circle" class="add-circle"></ion-icon>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="dummy-table row shadow">
+            <thead>
+                <tr>
+                    <th>Lunch Item:</th>
+                    <th>Quantity:</th>
+                    <th>Calories:</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Zach</td>
+                    <td> 150 </td>
+                    <td> Healthy</td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="button-table">
+            <tbody>
+                <tr>
+                    <td>
+                        <h3>Show Dinner Item:</h3>
+                    </td>
+                    <td>
+                        <ion-icon name="add-circle" class="add-circle"></ion-icon>
+                    </td>
+                    <td>
+                        <h3>Add Dinner Item:</h3>
+                    </td>
+                    <td>
+                        <ion-icon name="add-circle" class="add-circle"></ion-icon>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="dummy-table row shadow">
+            <thead>
+                <tr>
+                    <th>Dinner Item:</th>
+                    <th>Quantity:</th>
+                    <th>Calories:</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Zach</td>
+                    <td> 150 </td>
+                    <td> Healthy</td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="button-table">
+            <tbody>
+                <tr>
+                    <td>
+                        <h3>Show Snack Item:</h3>
+                    </td>
+                    <td>
+                        <ion-icon name="add-circle" class="add-circle"></ion-icon>
+                    </td>
+                    <td>
+                        <h3>Add Snack Item:</h3>
+                    </td>
+                    <td>
+                        <ion-icon name="add-circle" class="add-circle"></ion-icon>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table class="dummy-table row shadow">
+            <thead>
+                <tr>
+                    <th>Snack Item:</th>
+                    <th>Quantity:</th>
+                    <th>Calories:</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Zach</td>
+                    <td> 150 </td>
+                    <td> Healthy</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </section>
+
+    <footer>
+        <div class="row">
+            <div class="col span-1-of-2">
+                <ul class="footer-nav">
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Press</a></li>
+                    <li><a href="#">ios App</a></li>
+                    <li><a href="#">Android App</a></li>
+                    <li><a href="#">About Us</a></li>
+                </ul>
+            </div>
+            <div class=" col span span-1-of-2">
+                <div>
+                    <img src="Resources/CSS/IMG/Activedo-logos/Activedo-logos_white.png" alt="Activedo-logo"
+                        class="nav-logo">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <p>Copyright &copy; 2021 by Activedo. All rights reserved. </p>
+        </div>
+    </footer>
+
+</body>
+
+
+</html>

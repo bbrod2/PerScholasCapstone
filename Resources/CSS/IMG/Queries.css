@@ -311,7 +311,7 @@
     }
 
     .s {
-        height: 70vh;
+        height: 75vh;
     }
 
     .login-con {
@@ -408,6 +408,17 @@
     .login-title {
         margin-top: -45px;
         margin-bottom: 0px;
+
+    }
+
+    .login-pic {
+
+
+        height: 200vh;
+        width: 50%;
+        zoom: 35%;
+        padding: 50px;
+        transform: translateY(5%);
 
     }
 
