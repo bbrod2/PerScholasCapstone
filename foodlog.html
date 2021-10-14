@@ -109,13 +109,26 @@
                         <h3>Add Breakfast Item:</h3>
                     </td>
                     <td>
-                        <ion-icon name="add-circle" class="add-circle"></ion-icon>
+                        <ion-icon name="add-circle" class="add-circle" onclick="displayForm()" id="plusIcon"></ion-icon>
+                        <ion-icon name="remove-circle" style="display: none;" id="minusIcon" onclick="removeForm()">
+                        </ion-icon>
+
+                    </td>
+                    <td style="max-width: 300px; display: none;" id="breakFastForm">
+                        <form method="post" action="#">
+                            <input type="text" name="name" id="Username" placeholder="Breakfast Item" required>
+                            <input type="text" name="name" id="Username" placeholder="Quantity" required>
+                            <input type="text" name="name" id="Username" placeholder="Calories" required>
+                            <button type="submit" id="submit" class="form-button1">
+                                Add
+                            </button>
+                        </form>
                     </td>
                 </tr>
             </tbody>
         </table>
 
-        <table class="dummy-table row shadow">
+        <table class="dummy-table row shadow" id="breakFastOneTable">
             <thead>
                 <tr>
                     <th>Breakfast Item:</th>
@@ -139,6 +152,17 @@
                     </td>
                     <td>
                         <ion-icon name="add-circle" class="add-circle"></ion-icon>
+                    </td>
+                    <td>
+                        <h3>Search Lunch Item:</h3>
+                    </td>
+                    <td>
+                        <form method="post" action="#">
+                            <input type="text" name="name" id="Username" placeholder="Search" required>
+                            <button type="submit" id="submit" class="form-button1">
+                                Add
+                            </button>
+                        </form>
                     </td>
                 </tr>
             </tbody>

@@ -152,15 +152,24 @@ function displayDaySeven() {
 }
 
 
+function addTableRow() {
+const table = document.getElementById("breakFastOneTable");
+const row = table.inertRow(0);
+const cell1 = row.insertCell(0);
+const cell2 = row.insertCell(1);
+const cell3 = row.insertCell(2); 
+cell1.innerHTML = "New Item";
+cell2.innerHTML = "5";
+cell3.innerHTML = "600"; 
+}
 
+function displayForm() {
+    document.getElementById("breakFastForm").style.display = "block";
+    document.getElementById("formTitle").style.display = "block";
+    document.getElementById("minusIcon").style.display = "block";
+    document.getElementById("plusIcon").style.display = "none";
+}
 
-{/* <h2 id="header">:</h2>
-            <h2 id="header"></h2>
-            <h2 id="header"></h2>
-            <h2 id="header"></h2>
-            <h2 id="header"></h2>
-            <h2 id="header"></h2>
- */}
 /*------------------------------------------------------*/
 /*--------------FoodLog-End-----------------*/
 /*-----------------------------------------------------*/
