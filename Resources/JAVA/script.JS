@@ -163,12 +163,26 @@ cell2.innerHTML = "5";
 cell3.innerHTML = "600"; 
 }
 
-function displayForm() {
-    document.getElementById("breakFastForm").style.display = "block";
-    document.getElementById("formTitle").style.display = "block";
-    document.getElementById("minusIcon").style.display = "block";
-    document.getElementById("plusIcon").style.display = "none";
+
+      
+ function displayForm() {
+
+        document.getElementById("breakFastForm").style.display = "block";
+        document.getElementById("plusIcon").style.display = "none";
+        document.getElementById("minusIcon").style.display = "block";
+  
+ }
+
+ function hideForm() {
+
+    document.getElementById("breakFastForm").style.display = "none";
+    document.getElementById("plusIcon").style.display = "block";
+    document.getElementById("minusIcon").style.display = "none";
+
 }
+  
+   
+
 
 /*------------------------------------------------------*/
 /*--------------FoodLog-End-----------------*/

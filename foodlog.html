@@ -109,9 +109,12 @@
                         <h3>Add Breakfast Item:</h3>
                     </td>
                     <td>
-                        <ion-icon name="add-circle" class="add-circle" onclick="displayForm()" id="plusIcon"></ion-icon>
-                        <ion-icon name="remove-circle" style="display: none;" id="minusIcon" onclick="removeForm()">
+
+                        <ion-icon name="add-circle" class="add-circle" id="plusIcon" onclick="displayForm()"></ion-icon>
+                        <ion-icon name="remove-circle" style="display: none;" class="add-circle" id="minusIcon"
+                            onclick="hideForm()">
                         </ion-icon>
+
 
                     </td>
                     <td style="max-width: 300px; display: none;" id="breakFastForm">
