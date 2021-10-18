@@ -51,7 +51,7 @@ function validateAge() {
 }
 
 
-const username = document.getElementById("username");
+/* const username = document.getElementById("username");
 username.addEventListener('submit', validateUsername);
 
 
@@ -59,7 +59,7 @@ const gender = document.getElementById("gender");
 gender.addEventListener('submit', validateGender);
 
 const age = document.getElementById("age");
-age.addEventListener('submit', validateAge);
+age.addEventListener('submit', validateAge); */
 
 /*------------------------------------------------------*/
 /*--------------sign-up-form-end-----------------*/
@@ -236,6 +236,8 @@ function displaySearchBar3() {
 
     }
 }
+
+
 /*-------------------------------DayTwo-----------------------------------*/
 function d2displayForm() {
 
@@ -683,8 +685,30 @@ function d7displaySearchBar3() {
 }
 
 
+/*-------------------------remove-item-----------------*/
+function HideContent() {
+    document.getElementById("rplusIcon").style.display = "block";
+ 
+   
+      for(let i=0; i < arguments.length; i++){
+        document.getElementById(arguments[i]).style.display = "none";
+      }
+      HideContent('bRemoveItem','bRemoveItem1','lRemoveItem','lRemoveItem1','dRemoveItem','dRemoveItem1','sRemoveItem','sRemoveItem1', 'rminusIcon');
+    } 
 
 
+ function DisplayContent() {
+    document.getElementById("rplusIcon").style.display = "none";
+  
+          for(let i=0; i < arguments.length; i++ ){
+            document.getElementById(arguments[i]).style.display = "block";
+       
+    }
+    DisplayContent('bRemoveItem','bRemoveItem1','lRemoveItem','lRemoveItem1','dRemoveItem','dRemoveItem1','sRemoveItem','sRemoveItem1', 'rminusIcon');
+}
+
+
+   
 
 
 
