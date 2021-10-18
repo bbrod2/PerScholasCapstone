@@ -194,23 +194,41 @@ input[type=submit]:active {
 
 }
 
+.form-button2,
 .form-button1,
 .form-button {
     display: block;
     width: 100%;
-    background: #0984e3;
     color: white;
     border-radius: 4px;
     cursor: pointer;
     border: none;
 }
 
+.form-button1,
+.form-button {
+
+    background-color: #0984e3;
+}
+
 .form-button {
     padding: 0.75rem;
 }
 
+.form-button2,
 .form-button1 {
     padding: 0.3rem;
+
+}
+
+.form-button2 {
+    background-color: #d63031;
+}
+
+.form-button2:hover,
+.form-button2:active {
+    background-color: #be2627;
+    border: 1px solid #be2627;
 }
 
 .form-button1:hover,
