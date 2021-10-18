@@ -458,6 +458,234 @@ function d4displaySearchBar3() {
 }
 
 
+/*-------------------------------DayFive-----------------------------------*/
+
+function d5displayForm() {
+
+    if (document.getElementById("d5breakFastForm").style.display == "none") {
+
+        document.getElementById("d5breakFastForm").style.display = "block";
+        document.getElementById("d5plusIcon").style.display = "none";
+        document.getElementById("d5minusIcon").style.display = "block";
+    } else {
+        document.getElementById("d5breakFastForm").style.display = "none";
+        document.getElementById("d5plusIcon").style.display = "block";
+        document.getElementById("d5minusIcon").style.display = "none";
+
+    }
+}
+
+
+function d5displaySearchBar() {
+    if (document.getElementById("d5breakFastSearchBar").style.display == "none") {
+
+        document.getElementById("d5breakFastSearchBar").style.display = "block";
+        document.getElementById("d5breakFastplusIcon").style.display = "none";
+        document.getElementById("d5breakFastminusIcon").style.display = "block";
+    } else {
+        document.getElementById("d5breakFastSearchBar").style.display = "none";
+        document.getElementById("d5breakFastplusIcon").style.display = "block";
+        document.getElementById("d5breakFastminusIcon").style.display = "none";
+
+    }
+}
+
+function d5displaySearchBar1() {
+    if (document.getElementById("d5lunchSearchBar").style.display == "none") {
+
+        document.getElementById("d5lunchSearchBar").style.display = "block";
+        document.getElementById("d5lunchplusIcon").style.display = "none";
+        document.getElementById("d5lunchminusIcon").style.display = "block";
+    } else {
+        document.getElementById("d5lunchSearchBar").style.display = "none";
+        document.getElementById("d5lunchplusIcon").style.display = "block";
+        document.getElementById("d5lunchminusIcon").style.display = "none";
+
+    }
+}
+
+function d5displaySearchBar2() {
+    if (document.getElementById("d5dinnerSearchBar").style.display == "none") {
+
+        document.getElementById("d5dinnerSearchBar").style.display = "block";
+        document.getElementById("d5dinnerplusIcon").style.display = "none";
+        document.getElementById("d5dinnerminusIcon").style.display = "block";
+    } else {
+        document.getElementById("d5dinnerSearchBar").style.display = "none";
+        document.getElementById("d5dinnerplusIcon").style.display = "block";
+        document.getElementById("d5dinnerminusIcon").style.display = "none";
+
+    }
+}
+
+function d5displaySearchBar3() {
+    if (document.getElementById("d5snackSearchBar").style.display == "none") {
+
+        document.getElementById("d5snackSearchBar").style.display = "block";
+        document.getElementById("d5snackplusIcon").style.display = "none";
+        document.getElementById("d5snackminusIcon").style.display = "block";
+    } else {
+        document.getElementById("d5snackSearchBar").style.display = "none";
+        document.getElementById("d5snackplusIcon").style.display = "block";
+        document.getElementById("d5snackminusIcon").style.display = "none";
+
+    }
+}
+
+
+/*-------------------------------DaySix-----------------------------------*/
+
+function d6displayForm() {
+
+    if (document.getElementById("d6breakFastForm").style.display == "none") {
+
+        document.getElementById("d6breakFastForm").style.display = "block";
+        document.getElementById("d6plusIcon").style.display = "none";
+        document.getElementById("d6minusIcon").style.display = "block";
+    } else {
+        document.getElementById("d6breakFastForm").style.display = "none";
+        document.getElementById("d6plusIcon").style.display = "block";
+        document.getElementById("d6minusIcon").style.display = "none";
+
+    }
+}
+
+
+function d6displaySearchBar() {
+    if (document.getElementById("d6breakFastSearchBar").style.display == "none") {
+
+        document.getElementById("d6breakFastSearchBar").style.display = "block";
+        document.getElementById("d6breakFastplusIcon").style.display = "none";
+        document.getElementById("d6breakFastminusIcon").style.display = "block";
+    } else {
+        document.getElementById("d6breakFastSearchBar").style.display = "none";
+        document.getElementById("d6breakFastplusIcon").style.display = "block";
+        document.getElementById("d6breakFastminusIcon").style.display = "none";
+
+    }
+}
+
+function d6displaySearchBar1() {
+    if (document.getElementById("d6lunchSearchBar").style.display == "none") {
+
+        document.getElementById("d6lunchSearchBar").style.display = "block";
+        document.getElementById("d6lunchplusIcon").style.display = "none";
+        document.getElementById("d6lunchminusIcon").style.display = "block";
+    } else {
+        document.getElementById("d6lunchSearchBar").style.display = "none";
+        document.getElementById("d6lunchplusIcon").style.display = "block";
+        document.getElementById("d6lunchminusIcon").style.display = "none";
+
+    }
+}
+
+function d6displaySearchBar2() {
+    if (document.getElementById("d6dinnerSearchBar").style.display == "none") {
+
+        document.getElementById("d6dinnerSearchBar").style.display = "block";
+        document.getElementById("d6dinnerplusIcon").style.display = "none";
+        document.getElementById("d6dinnerminusIcon").style.display = "block";
+    } else {
+        document.getElementById("d6dinnerSearchBar").style.display = "none";
+        document.getElementById("d6dinnerplusIcon").style.display = "block";
+        document.getElementById("d6dinnerminusIcon").style.display = "none";
+
+    }
+}
+
+function d6displaySearchBar3() {
+    if (document.getElementById("d6snackSearchBar").style.display == "none") {
+
+        document.getElementById("d6snackSearchBar").style.display = "block";
+        document.getElementById("d6snackplusIcon").style.display = "none";
+        document.getElementById("d6snackminusIcon").style.display = "block";
+    } else {
+        document.getElementById("d6snackSearchBar").style.display = "none";
+        document.getElementById("d6snackplusIcon").style.display = "block";
+        document.getElementById("d6snackminusIcon").style.display = "none";
+
+    }
+}
+
+
+/*-------------------------------DaySeven-----------------------------------*/
+
+function d7displayForm() {
+
+    if (document.getElementById("d7breakFastForm").style.display == "none") {
+
+        document.getElementById("d7breakFastForm").style.display = "block";
+        document.getElementById("d7plusIcon").style.display = "none";
+        document.getElementById("d7minusIcon").style.display = "block";
+    } else {
+        document.getElementById("d7breakFastForm").style.display = "none";
+        document.getElementById("d7plusIcon").style.display = "block";
+        document.getElementById("d7minusIcon").style.display = "none";
+
+    }
+}
+
+
+function d7displaySearchBar() {
+    if (document.getElementById("d7breakFastSearchBar").style.display == "none") {
+
+        document.getElementById("d7breakFastSearchBar").style.display = "block";
+        document.getElementById("d7breakFastplusIcon").style.display = "none";
+        document.getElementById("d7breakFastminusIcon").style.display = "block";
+    } else {
+        document.getElementById("d7breakFastSearchBar").style.display = "none";
+        document.getElementById("d7breakFastplusIcon").style.display = "block";
+        document.getElementById("d7breakFastminusIcon").style.display = "none";
+
+    }
+}
+
+function d7displaySearchBar1() {
+    if (document.getElementById("d7lunchSearchBar").style.display == "none") {
+
+        document.getElementById("d7lunchSearchBar").style.display = "block";
+        document.getElementById("d7lunchplusIcon").style.display = "none";
+        document.getElementById("d7lunchminusIcon").style.display = "block";
+    } else {
+        document.getElementById("d7lunchSearchBar").style.display = "none";
+        document.getElementById("d7lunchplusIcon").style.display = "block";
+        document.getElementById("d7lunchminusIcon").style.display = "none";
+
+    }
+}
+
+function d7displaySearchBar2() {
+    if (document.getElementById("d7dinnerSearchBar").style.display == "none") {
+
+        document.getElementById("d7dinnerSearchBar").style.display = "block";
+        document.getElementById("d7dinnerplusIcon").style.display = "none";
+        document.getElementById("d7dinnerminusIcon").style.display = "block";
+    } else {
+        document.getElementById("d7dinnerSearchBar").style.display = "none";
+        document.getElementById("d7dinnerplusIcon").style.display = "block";
+        document.getElementById("d7dinnerminusIcon").style.display = "none";
+
+    }
+}
+
+function d7displaySearchBar3() {
+    if (document.getElementById("d7snackSearchBar").style.display == "none") {
+
+        document.getElementById("d7snackSearchBar").style.display = "block";
+        document.getElementById("d7snackplusIcon").style.display = "none";
+        document.getElementById("d7snackminusIcon").style.display = "block";
+    } else {
+        document.getElementById("d7snackSearchBar").style.display = "none";
+        document.getElementById("d7snackplusIcon").style.display = "block";
+        document.getElementById("d7snackminusIcon").style.display = "none";
+
+    }
+}
+
+
+
+
+
 
 
 

@@ -314,7 +314,7 @@
                         <h3>Input Food Item:</h3>
                     </td>
                     <td>
-                        <ion-icon name="add-circle" class="add-circle" id="plusIcon" onclick="d2displayForm()">
+                        <ion-icon name="add-circle" class="add-circle" id="d2plusIcon" onclick="d2displayForm()">
                         </ion-icon>
                         <ion-icon name="remove-circle" style="display: none;" class="add-circle" id="d2minusIcon"
                             onclick="d2displayForm()">
@@ -521,7 +521,7 @@
                         <h3>Input Food Item:</h3>
                     </td>
                     <td>
-                        <ion-icon name="add-circle" class="add-circle" id="plusIcon" onclick="d3displayForm()">
+                        <ion-icon name="add-circle" class="add-circle" id="d3plusIcon" onclick="d3displayForm()">
                         </ion-icon>
                         <ion-icon name="remove-circle" style="display: none;" class="add-circle" id="d3minusIcon"
                             onclick="d3displayForm()">
@@ -728,7 +728,7 @@
                         <h3>Input Food Item:</h3>
                     </td>
                     <td>
-                        <ion-icon name="add-circle" class="add-circle" id="plusIcon" onclick="d4displayForm()">
+                        <ion-icon name="add-circle" class="add-circle" id="d4plusIcon" onclick="d4displayForm()">
                         </ion-icon>
                         <ion-icon name="remove-circle" style="display: none;" class="add-circle" id="d4minusIcon"
                             onclick="d4displayForm()">
@@ -929,6 +929,31 @@
                 In-take for
                 7-Days!</p>
         </div>
+        <table class="button1-table">
+            <tbody>
+                <tr>
+                    <td>
+                        <h3>Input Food Item:</h3>
+                    </td>
+                    <td>
+                        <ion-icon name="add-circle" class="add-circle" id="d5plusIcon" onclick="d5displayForm()">
+                        </ion-icon>
+                        <ion-icon name="remove-circle" style="display: none;" class="add-circle" id="d5minusIcon"
+                            onclick="d5displayForm()">
+                    </td>
+                    <td style="max-width: 300px; display: none;" id="d5breakFastForm">
+                        <form method="post" action="/foodlog">
+                            <input type="text" name="name" id="Username" placeholder="Breakfast Item" required>
+                            <input type="text" name="name" id="Username" placeholder="Quantity" required>
+                            <input type="text" name="name" id="Username" placeholder="Calories" required>
+                            <button type="submit" id="submit" class="form-button1">
+                                Add
+                            </button>
+                        </form>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
         <table class="button-table">
             <tbody>
                 <tr>
@@ -936,15 +961,26 @@
                         <h3>Add Breakfast Item:</h3>
                     </td>
                     <td>
-                        <ion-icon name="add-circle" class="add-circle"></ion-icon>
-                        <ion-icon name="remove-circle" style="display: none;" class="add-circle">
+                        <ion-icon name="add-circle" class="add-circle" id="d5breakFastplusIcon"
+                            onclick="d5displaySearchBar()">
                         </ion-icon>
+                        <ion-icon name="remove-circle" style="display: none;" class="add-circle"
+                            id="d5breakFastminusIcon" onclick="d5displaySearchBar()">
+                        </ion-icon>
+                    </td>
+                    <td style="max-width: 300px; display: none;" id="d5breakFastSearchBar">
+                        <form method="post" action="/foodlog">
+                            <input type="text" name="search" id="search" placeholder="Search" required>
+                            <button type="submit" id="submit" class="form-button1">
+                                Add
+                            </button>
+                        </form>
                     </td>
                 </tr>
             </tbody>
         </table>
 
-        <table class="dummy-table row shadow">
+        <table class="dummy-table row shadow" id="breakFastOneTable">
             <thead>
                 <tr>
                     <th>Breakfast Item:</th>
@@ -967,9 +1003,21 @@
                         <h3>Add Lunch Item:</h3>
                     </td>
                     <td>
-                        <ion-icon name="add-circle" class="add-circle"></ion-icon>
-                        <ion-icon name="remove-circle" style="display: none;" class="add-circle">
+                        <ion-icon name="add-circle" class="add-circle" id="d5lunchplusIcon"
+                            onclick="d5displaySearchBar1()">
                         </ion-icon>
+                        <ion-icon name="remove-circle" style="display: none;" class="add-circle" id="d5lunchminusIcon"
+                            onclick="d5displaySearchBar1()">
+                        </ion-icon>
+                    </td>
+                    <td id="d5lunchSearchBar" style="display: none;">
+                        <form method="post" action="/foodlog">
+                            <input type="text" name="search" id="search" placeholder="Search" required>
+
+                            <button type="submit" id="submit" class="form-button1">
+                                Add
+                            </button>
+                        </form>
                     </td>
                 </tr>
             </tbody>
@@ -997,9 +1045,20 @@
                         <h3>Add Dinner Item:</h3>
                     </td>
                     <td>
-                        <ion-icon name="add-circle" class="add-circle"></ion-icon>
-                        <ion-icon name="remove-circle" style="display: none;" class="add-circle">
+                        <ion-icon name="add-circle" class="add-circle" id="d5dinnerplusIcon"
+                            onclick="d5displaySearchBar2()"></ion-icon>
+                        <ion-icon name="remove-circle" style="display: none;" class="add-circle" id="d5dinnerminusIcon"
+                            onclick="d5displaySearchBar2()">
                         </ion-icon>
+                    </td>
+                    <td id="d5dinnerSearchBar" style="display: none;">
+                        <form method="post" action="/foodlog">
+                            <input type="text" name="search" id="search" placeholder="Search" required>
+
+                            <button type="submit" id="submit" class="form-button1">
+                                Add
+                            </button>
+                        </form>
                     </td>
                 </tr>
 
@@ -1028,9 +1087,21 @@
                         <h3>Add Snack Item:</h3>
                     </td>
                     <td>
-                        <ion-icon name="add-circle" class="add-circle"></ion-icon>
-                        <ion-icon name="remove-circle" style="display: none;" class="add-circle">
+                        <ion-icon name="add-circle" class="add-circle" id="d5snackplusIcon"
+                            onclick="d5displaySearchBar3()">
                         </ion-icon>
+                        <ion-icon name="remove-circle" style="display: none;" class="add-circle" id="d5snackminusIcon"
+                            onclick="d5displaySearchBar3()">
+                        </ion-icon>
+                    </td>
+                    <td id="d5snackSearchBar" style="display: none;">
+                        <form method="post" action="/foodlog">
+                            <input type="text" name="search" id="search" placeholder="Search" required>
+
+                            <button type="submit" id="submit" class="form-button1">
+                                Add
+                            </button>
+                        </form>
                     </td>
                 </tr>
             </tbody>
@@ -1065,6 +1136,31 @@
                 In-take for
                 7-Days!</p>
         </div>
+        <table class="button1-table">
+            <tbody>
+                <tr>
+                    <td>
+                        <h3>Input Food Item:</h3>
+                    </td>
+                    <td>
+                        <ion-icon name="add-circle" class="add-circle" id="d6plusIcon" onclick="d6displayForm()">
+                        </ion-icon>
+                        <ion-icon name="remove-circle" style="display: none;" class="add-circle" id="d6minusIcon"
+                            onclick="d6displayForm()">
+                    </td>
+                    <td style="max-width: 300px; display: none;" id="d6breakFastForm">
+                        <form method="post" action="/foodlog">
+                            <input type="text" name="name" id="Username" placeholder="Breakfast Item" required>
+                            <input type="text" name="name" id="Username" placeholder="Quantity" required>
+                            <input type="text" name="name" id="Username" placeholder="Calories" required>
+                            <button type="submit" id="submit" class="form-button1">
+                                Add
+                            </button>
+                        </form>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
         <table class="button-table">
             <tbody>
                 <tr>
@@ -1072,15 +1168,26 @@
                         <h3>Add Breakfast Item:</h3>
                     </td>
                     <td>
-                        <ion-icon name="add-circle" class="add-circle"></ion-icon>
-                        <ion-icon name="remove-circle" style="display: none;" class="add-circle">
+                        <ion-icon name="add-circle" class="add-circle" id="d6breakFastplusIcon"
+                            onclick="d6displaySearchBar()">
                         </ion-icon>
+                        <ion-icon name="remove-circle" style="display: none;" class="add-circle"
+                            id="d6breakFastminusIcon" onclick="d6displaySearchBar()">
+                        </ion-icon>
+                    </td>
+                    <td style="max-width: 300px; display: none;" id="d6breakFastSearchBar">
+                        <form method="post" action="/foodlog">
+                            <input type="text" name="search" id="search" placeholder="Search" required>
+                            <button type="submit" id="submit" class="form-button1">
+                                Add
+                            </button>
+                        </form>
                     </td>
                 </tr>
             </tbody>
         </table>
 
-        <table class="dummy-table row shadow">
+        <table class="dummy-table row shadow" id="breakFastOneTable">
             <thead>
                 <tr>
                     <th>Breakfast Item:</th>
@@ -1103,9 +1210,21 @@
                         <h3>Add Lunch Item:</h3>
                     </td>
                     <td>
-                        <ion-icon name="add-circle" class="add-circle"></ion-icon>
-                        <ion-icon name="remove-circle" style="display: none;" class="add-circle">
+                        <ion-icon name="add-circle" class="add-circle" id="d6lunchplusIcon"
+                            onclick="d6displaySearchBar1()">
                         </ion-icon>
+                        <ion-icon name="remove-circle" style="display: none;" class="add-circle" id="d6lunchminusIcon"
+                            onclick="d6displaySearchBar1()">
+                        </ion-icon>
+                    </td>
+                    <td id="d6lunchSearchBar" style="display: none;">
+                        <form method="post" action="/foodlog">
+                            <input type="text" name="search" id="search" placeholder="Search" required>
+
+                            <button type="submit" id="submit" class="form-button1">
+                                Add
+                            </button>
+                        </form>
                     </td>
                 </tr>
             </tbody>
@@ -1133,9 +1252,20 @@
                         <h3>Add Dinner Item:</h3>
                     </td>
                     <td>
-                        <ion-icon name="add-circle" class="add-circle"></ion-icon>
-                        <ion-icon name="remove-circle" style="display: none;" class="add-circle">
+                        <ion-icon name="add-circle" class="add-circle" id="d6dinnerplusIcon"
+                            onclick="d6displaySearchBar2()"></ion-icon>
+                        <ion-icon name="remove-circle" style="display: none;" class="add-circle" id="d6dinnerminusIcon"
+                            onclick="d6displaySearchBar2()">
                         </ion-icon>
+                    </td>
+                    <td id="d6dinnerSearchBar" style="display: none;">
+                        <form method="post" action="/foodlog">
+                            <input type="text" name="search" id="search" placeholder="Search" required>
+
+                            <button type="submit" id="submit" class="form-button1">
+                                Add
+                            </button>
+                        </form>
                     </td>
                 </tr>
 
@@ -1164,9 +1294,21 @@
                         <h3>Add Snack Item:</h3>
                     </td>
                     <td>
-                        <ion-icon name="add-circle" class="add-circle"></ion-icon>
-                        <ion-icon name="remove-circle" style="display: none;" class="add-circle">
+                        <ion-icon name="add-circle" class="add-circle" id="d6snackplusIcon"
+                            onclick="d6displaySearchBar3()">
                         </ion-icon>
+                        <ion-icon name="remove-circle" style="display: none;" class="add-circle" id="d6snackminusIcon"
+                            onclick="d6displaySearchBar3()">
+                        </ion-icon>
+                    </td>
+                    <td id="d6snackSearchBar" style="display: none;">
+                        <form method="post" action="/foodlog">
+                            <input type="text" name="search" id="search" placeholder="Search" required>
+
+                            <button type="submit" id="submit" class="form-button1">
+                                Add
+                            </button>
+                        </form>
                     </td>
                 </tr>
             </tbody>
@@ -1201,6 +1343,31 @@
                 In-take for
                 7-Days!</p>
         </div>
+        <table class="button1-table">
+            <tbody>
+                <tr>
+                    <td>
+                        <h3>Input Food Item:</h3>
+                    </td>
+                    <td>
+                        <ion-icon name="add-circle" class="add-circle" id="d7plusIcon" onclick="d7displayForm()">
+                        </ion-icon>
+                        <ion-icon name="remove-circle" style="display: none;" class="add-circle" id="d7minusIcon"
+                            onclick="d7displayForm()">
+                    </td>
+                    <td style="max-width: 300px; display: none;" id="d7breakFastForm">
+                        <form method="post" action="/foodlog">
+                            <input type="text" name="name" id="Username" placeholder="Breakfast Item" required>
+                            <input type="text" name="name" id="Username" placeholder="Quantity" required>
+                            <input type="text" name="name" id="Username" placeholder="Calories" required>
+                            <button type="submit" id="submit" class="form-button1">
+                                Add
+                            </button>
+                        </form>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
         <table class="button-table">
             <tbody>
                 <tr>
@@ -1208,15 +1375,26 @@
                         <h3>Add Breakfast Item:</h3>
                     </td>
                     <td>
-                        <ion-icon name="add-circle" class="add-circle"></ion-icon>
-                        <ion-icon name="remove-circle" style="display: none;" class="add-circle">
+                        <ion-icon name="add-circle" class="add-circle" id="d7breakFastplusIcon"
+                            onclick="d7displaySearchBar()">
                         </ion-icon>
+                        <ion-icon name="remove-circle" style="display: none;" class="add-circle"
+                            id="d7breakFastminusIcon" onclick="d7displaySearchBar()">
+                        </ion-icon>
+                    </td>
+                    <td style="max-width: 300px; display: none;" id="d7breakFastSearchBar">
+                        <form method="post" action="/foodlog">
+                            <input type="text" name="search" id="search" placeholder="Search" required>
+                            <button type="submit" id="submit" class="form-button1">
+                                Add
+                            </button>
+                        </form>
                     </td>
                 </tr>
             </tbody>
         </table>
 
-        <table class="dummy-table row shadow">
+        <table class="dummy-table row shadow" id="breakFastOneTable">
             <thead>
                 <tr>
                     <th>Breakfast Item:</th>
@@ -1239,9 +1417,21 @@
                         <h3>Add Lunch Item:</h3>
                     </td>
                     <td>
-                        <ion-icon name="add-circle" class="add-circle"></ion-icon>
-                        <ion-icon name="remove-circle" style="display: none;" class="add-circle">
+                        <ion-icon name="add-circle" class="add-circle" id="d7lunchplusIcon"
+                            onclick="d7displaySearchBar1()">
                         </ion-icon>
+                        <ion-icon name="remove-circle" style="display: none;" class="add-circle" id="d7lunchminusIcon"
+                            onclick="d7displaySearchBar1()">
+                        </ion-icon>
+                    </td>
+                    <td id="d7lunchSearchBar" style="display: none;">
+                        <form method="post" action="/foodlog">
+                            <input type="text" name="search" id="search" placeholder="Search" required>
+
+                            <button type="submit" id="submit" class="form-button1">
+                                Add
+                            </button>
+                        </form>
                     </td>
                 </tr>
             </tbody>
@@ -1269,9 +1459,20 @@
                         <h3>Add Dinner Item:</h3>
                     </td>
                     <td>
-                        <ion-icon name="add-circle" class="add-circle"></ion-icon>
-                        <ion-icon name="remove-circle" style="display: none;" class="add-circle">
+                        <ion-icon name="add-circle" class="add-circle" id="d7dinnerplusIcon"
+                            onclick="d7displaySearchBar2()"></ion-icon>
+                        <ion-icon name="remove-circle" style="display: none;" class="add-circle" id="d7dinnerminusIcon"
+                            onclick="d7displaySearchBar2()">
                         </ion-icon>
+                    </td>
+                    <td id="d7dinnerSearchBar" style="display: none;">
+                        <form method="post" action="/foodlog">
+                            <input type="text" name="search" id="search" placeholder="Search" required>
+
+                            <button type="submit" id="submit" class="form-button1">
+                                Add
+                            </button>
+                        </form>
                     </td>
                 </tr>
 
@@ -1300,9 +1501,21 @@
                         <h3>Add Snack Item:</h3>
                     </td>
                     <td>
-                        <ion-icon name="add-circle" class="add-circle"></ion-icon>
-                        <ion-icon name="remove-circle" style="display: none;" class="add-circle">
+                        <ion-icon name="add-circle" class="add-circle" id="d7snackplusIcon"
+                            onclick="d7displaySearchBar3()">
                         </ion-icon>
+                        <ion-icon name="remove-circle" style="display: none;" class="add-circle" id="d7snackminusIcon"
+                            onclick="d7displaySearchBar3()">
+                        </ion-icon>
+                    </td>
+                    <td id="d7snackSearchBar" style="display: none;">
+                        <form method="post" action="/foodlog">
+                            <input type="text" name="search" id="search" placeholder="Search" required>
+
+                            <button type="submit" id="submit" class="form-button1">
+                                Add
+                            </button>
+                        </form>
                     </td>
                 </tr>
             </tbody>
