@@ -375,10 +375,10 @@
                             <h3>Remove Food Items:</h3>
                         </td>
                         <td>
-                            <ion-icon name="add-circle" class="add-circle" id="plusIcon" onclick="displayForm()">
+                            <ion-icon name="add-circle" class="add-circle" id="r2plusIcon" onclick="d2DisplayContent()">
                             </ion-icon>
-                            <ion-icon name="remove-circle" style="display: none;" class="add-circle" id="minusIcon"
-                                onclick="displayForm()">
+                            <ion-icon name="remove-circle" style="display: none;" class="add-circle" id="r2minusIcon"
+                                onclick="d2HideContent()">
                         </td>
                     </tr>
                 </tbody>
@@ -416,7 +416,7 @@
                     <th>Breakfast Item:</th>
                     <th>Quantity:</th>
                     <th>Calories:</th>
-                    <th>Remove Item:</th>
+                    <th id="d2bRemoveItem" style="display: none;">Remove Item:</th>
                 </tr>
             </thead>
             <tbody>
@@ -424,7 +424,8 @@
                     <td>Zach</td>
                     <td> 150 </td>
                     <td> Healthy</td>
-                    <td> <button type="submit" id="submit" class="form-button2" style="max-width:150px;">
+                    <td id="d2bRemoveItem1" style="display: none;"> <button type="submit" id="submit"
+                            class="form-button2" style="max-width:150px;">
                             Remove
                         </button></td>
                 </tr>
@@ -462,7 +463,7 @@
                     <th>Lunch Item:</th>
                     <th>Quantity:</th>
                     <th>Calories:</th>
-                    <th>Remove Item:</th>
+                    <th id="d2lRemoveItem" style="display: none;">Remove Item:</th>
                 </tr>
             </thead>
             <tbody>
@@ -470,7 +471,8 @@
                     <td>Zach</td>
                     <td> 150 </td>
                     <td> Healthy</td>
-                    <td> <button type="submit" id="submit" class="form-button2" style="max-width:150px;">
+                    <td id="d2lRemoveItem1" style="display: none;"> <button type="submit" id="submit"
+                            class="form-button2" style="max-width:150px;">
                             Remove
                         </button></td>
                 </tr>
@@ -508,7 +510,7 @@
                     <th>Dinner Item:</th>
                     <th>Quantity:</th>
                     <th>Calories:</th>
-                    <th>Remove Item:</th>
+                    <th id="d2dRemoveItem" style="display: none;">Remove Item:</th>
                 </tr>
             </thead>
             <tbody>
@@ -516,7 +518,8 @@
                     <td>Zach</td>
                     <td> 150 </td>
                     <td> Healthy</td>
-                    <td> <button type="submit" id="submit" class="form-button2" style="max-width:150px;">
+                    <td id="d2dRemoveItem1" style="display: none;"> <button type="submit" id="submit"
+                            class="form-button2" style="max-width:150px;">
                             Remove
                         </button></td>
                 </tr>
@@ -555,7 +558,7 @@
                     <th>Snack Item:</th>
                     <th>Quantity:</th>
                     <th>Calories:</th>
-                    <th>Remove Item:</th>
+                    <th id="d2sRemoveItem" style="display: none;">Remove Item:</th>
                 </tr>
             </thead>
             <tbody>
@@ -563,7 +566,8 @@
                     <td>Zach</td>
                     <td> 150 </td>
                     <td> Healthy</td>
-                    <td> <button type="submit" id="submit" class="form-button2" style="max-width:150px;">
+                    <td id="d2sRemoveItem1" style="display: none;"> <button type="submit" id="submit"
+                            class="form-button2" style="max-width:150px;">
                             Remove
                         </button></td>
                 </tr>
@@ -613,10 +617,10 @@
                             <h3>Remove Food Items:</h3>
                         </td>
                         <td>
-                            <ion-icon name="add-circle" class="add-circle" id="plusIcon" onclick="displayForm()">
+                            <ion-icon name="add-circle" class="add-circle" id="r3plusIcon" onclick="d3DisplayContent()">
                             </ion-icon>
-                            <ion-icon name="remove-circle" style="display: none;" class="add-circle" id="minusIcon"
-                                onclick="displayForm()">
+                            <ion-icon name="remove-circle" style="display: none;" class="add-circle" id="r3minusIcon"
+                                onclick="d3HideContent()">
                         </td>
                     </tr>
                 </tbody>
@@ -654,7 +658,7 @@
                     <th>Breakfast Item:</th>
                     <th>Quantity:</th>
                     <th>Calories:</th>
-                    <th>Remove Item:</th>
+                    <th id="d3bRemoveItem" style="display: none;">Remove Item:</th>
                 </tr>
             </thead>
             <tbody>
@@ -662,7 +666,8 @@
                     <td>Zach</td>
                     <td> 150 </td>
                     <td> Healthy</td>
-                    <td> <button type="submit" id="submit" class="form-button2" style="max-width:150px;">
+                    <td id="d3bRemoveItem1" style="display: none;"> <button type="submit" id="submit"
+                            class="form-button2" style="max-width:150px;">
                             Remove
                         </button></td>
                 </tr>
@@ -700,7 +705,7 @@
                     <th>Lunch Item:</th>
                     <th>Quantity:</th>
                     <th>Calories:</th>
-                    <th>Remove Item:</th>
+                    <th id="d3lRemoveItem" style="display: none;">Remove Item:</th>
                 </tr>
             </thead>
             <tbody>
@@ -708,7 +713,8 @@
                     <td>Zach</td>
                     <td> 150 </td>
                     <td> Healthy</td>
-                    <td> <button type="submit" id="submit" class="form-button2" style="max-width:150px;">
+                    <td id="d3lRemoveItem1" style="display: none;"> <button type="submit" id="submit"
+                            class="form-button2" style="max-width:150px;">
                             Remove
                         </button></td>
                 </tr>
@@ -746,7 +752,7 @@
                     <th>Dinner Item:</th>
                     <th>Quantity:</th>
                     <th>Calories:</th>
-                    <th>Remove Item:</th>
+                    <th id="d3dRemoveItem" style="display: none;">Remove Item:</th>
                 </tr>
             </thead>
             <tbody>
@@ -754,7 +760,8 @@
                     <td>Zach</td>
                     <td> 150 </td>
                     <td> Healthy</td>
-                    <td> <button type="submit" id="submit" class="form-button2" style="max-width:150px;">
+                    <td id="d3dRemoveItem1" style="display: none;"> <button type="submit" id="submit"
+                            class="form-button2" style="max-width:150px;">
                             Remove
                         </button></td>
                 </tr>
@@ -793,7 +800,7 @@
                     <th>Snack Item:</th>
                     <th>Quantity:</th>
                     <th>Calories:</th>
-                    <th>Remove Item:</th>
+                    <th id="d3sRemoveItem" style="display: none;">Remove Item:</th>
                 </tr>
             </thead>
             <tbody>
@@ -801,7 +808,8 @@
                     <td>Zach</td>
                     <td> 150 </td>
                     <td> Healthy</td>
-                    <td> <button type="submit" id="submit" class="form-button2" style="max-width:150px;">
+                    <td id="d3sRemoveItem1" style="display: none;"> <button type="submit" id="submit"
+                            class="form-button2" style="max-width:150px;">
                             Remove
                         </button></td>
                 </tr>
@@ -851,10 +859,10 @@
                             <h3>Remove Food Items:</h3>
                         </td>
                         <td>
-                            <ion-icon name="add-circle" class="add-circle" id="plusIcon" onclick="displayForm()">
+                            <ion-icon name="add-circle" class="add-circle" id="r4plusIcon" onclick="d4DisplayContent()">
                             </ion-icon>
-                            <ion-icon name="remove-circle" style="display: none;" class="add-circle" id="minusIcon"
-                                onclick="displayForm()">
+                            <ion-icon name="remove-circle" style="display: none;" class="add-circle" id="r4minusIcon"
+                                onclick="d4HideContent()">
                         </td>
                     </tr>
                 </tbody>
@@ -892,7 +900,7 @@
                     <th>Breakfast Item:</th>
                     <th>Quantity:</th>
                     <th>Calories:</th>
-                    <th>Remove Item:</th>
+                    <th id="d4bRemoveItem" style="display: none;">Remove Item:</th>
                 </tr>
             </thead>
             <tbody>
@@ -900,7 +908,8 @@
                     <td>Zach</td>
                     <td> 150 </td>
                     <td> Healthy</td>
-                    <td> <button type="submit" id="submit" class="form-button2" style="max-width:150px;">
+                    <td id="d4bRemoveItem1" style="display: none;"> <button type="submit" id="submit"
+                            class="form-button2" style="max-width:150px;">
                             Remove
                         </button></td>
                 </tr>
@@ -938,7 +947,7 @@
                     <th>Lunch Item:</th>
                     <th>Quantity:</th>
                     <th>Calories:</th>
-                    <th>Remove Item:</th>
+                    <th id="d4lRemoveItem" style="display: none;">Remove Item:</th>
                 </tr>
             </thead>
             <tbody>
@@ -946,7 +955,8 @@
                     <td>Zach</td>
                     <td> 150 </td>
                     <td> Healthy</td>
-                    <td> <button type="submit" id="submit" class="form-button2" style="max-width:150px;">
+                    <td id="d4lRemoveItem1" style="display: none;"> <button type="submit" id="submit"
+                            class="form-button2" style="max-width:150px;">
                             Remove
                         </button></td>
                 </tr>
@@ -984,7 +994,7 @@
                     <th>Dinner Item:</th>
                     <th>Quantity:</th>
                     <th>Calories:</th>
-                    <th>Remove Item:</th>
+                    <th id="d4dRemoveItem" style="display: none;">Remove Item:</th>
                 </tr>
             </thead>
             <tbody>
@@ -992,7 +1002,8 @@
                     <td>Zach</td>
                     <td> 150 </td>
                     <td> Healthy</td>
-                    <td> <button type="submit" id="submit" class="form-button2" style="max-width:150px;">
+                    <td id="d4dRemoveItem1" style="display: none;"> <button type="submit" id="submit"
+                            class="form-button2" style="max-width:150px;">
                             Remove
                         </button></td>
                 </tr>
@@ -1031,7 +1042,7 @@
                     <th>Snack Item:</th>
                     <th>Quantity:</th>
                     <th>Calories:</th>
-                    <th>Remove Item:</th>
+                    <th id="d4sRemoveItem" style="display: none;">Remove Item:</th>
                 </tr>
             </thead>
             <tbody>
@@ -1039,7 +1050,8 @@
                     <td>Zach</td>
                     <td> 150 </td>
                     <td> Healthy</td>
-                    <td> <button type="submit" id="submit" class="form-button2" style="max-width:150px;">
+                    <td id="d4sRemoveItem1" style="display: none;"> <button type="submit" id="submit"
+                            class="form-button2" style="max-width:150px;">
                             Remove
                         </button></td>
                 </tr>
@@ -1090,10 +1102,10 @@
                             <h3>Remove Food Items:</h3>
                         </td>
                         <td>
-                            <ion-icon name="add-circle" class="add-circle" id="plusIcon" onclick="displayForm()">
+                            <ion-icon name="add-circle" class="add-circle" id="r5plusIcon" onclick="d5DisplayContent()">
                             </ion-icon>
-                            <ion-icon name="remove-circle" style="display: none;" class="add-circle" id="minusIcon"
-                                onclick="displayForm()">
+                            <ion-icon name="remove-circle" style="display: none;" class="add-circle" id="r5minusIcon"
+                                onclick="d5HideContent()">
                         </td>
                     </tr>
                 </tbody>
@@ -1131,7 +1143,7 @@
                     <th>Breakfast Item:</th>
                     <th>Quantity:</th>
                     <th>Calories:</th>
-                    <th>Remove Item:</th>
+                    <th id="d5bRemoveItem" style="display: none;">Remove Item:</th>
                 </tr>
             </thead>
             <tbody>
@@ -1139,7 +1151,8 @@
                     <td>Zach</td>
                     <td> 150 </td>
                     <td> Healthy</td>
-                    <td> <button type="submit" id="submit" class="form-button2" style="max-width:150px;">
+                    <td id="d5bRemoveItem1" style="display: none;"> <button type="submit" id="submit"
+                            class="form-button2" style="max-width:150px;">
                             Remove
                         </button></td>
                 </tr>
@@ -1177,7 +1190,7 @@
                     <th>Lunch Item:</th>
                     <th>Quantity:</th>
                     <th>Calories:</th>
-                    <th>Remove Item:</th>
+                    <th id="d5lRemoveItem" style="display: none;">Remove Item:</th>
                 </tr>
             </thead>
             <tbody>
@@ -1185,7 +1198,8 @@
                     <td>Zach</td>
                     <td> 150 </td>
                     <td> Healthy</td>
-                    <td> <button type="submit" id="submit" class="form-button2" style="max-width:150px;">
+                    <td id="d5lRemoveItem1" style="display: none;"> <button type="submit" id="submit"
+                            class="form-button2" style="max-width:150px;">
                             Remove
                         </button></td>
                 </tr>
@@ -1223,7 +1237,7 @@
                     <th>Dinner Item:</th>
                     <th>Quantity:</th>
                     <th>Calories:</th>
-                    <th>Remove Item:</th>
+                    <th id="d5dRemoveItem" style="display: none;">Remove Item:</th>
                 </tr>
             </thead>
             <tbody>
@@ -1231,7 +1245,8 @@
                     <td>Zach</td>
                     <td> 150 </td>
                     <td> Healthy</td>
-                    <td> <button type="submit" id="submit" class="form-button2" style="max-width:150px;">
+                    <td id="d5dRemoveItem1" style="display: none;"> <button type="submit" id="submit"
+                            class="form-button2" style="max-width:150px;">
                             Remove
                         </button></td>
                 </tr>
@@ -1270,7 +1285,7 @@
                     <th>Snack Item:</th>
                     <th>Quantity:</th>
                     <th>Calories:</th>
-                    <th>Remove Item:</th>
+                    <th id="d5sRemoveItem" style="display: none;">Remove Item:</th>
                 </tr>
             </thead>
             <tbody>
@@ -1278,7 +1293,8 @@
                     <td>Zach</td>
                     <td> 150 </td>
                     <td> Healthy</td>
-                    <td> <button type="submit" id="submit" class="form-button2" style="max-width:150px;">
+                    <td id="d5sRemoveItem1" style="display: none;"> <button type="submit" id="submit"
+                            class="form-button2" style="max-width:150px;">
                             Remove
                         </button></td>
                 </tr>
@@ -1328,10 +1344,10 @@
                             <h3>Remove Food Items:</h3>
                         </td>
                         <td>
-                            <ion-icon name="add-circle" class="add-circle" id="plusIcon" onclick="displayForm()">
+                            <ion-icon name="add-circle" class="add-circle" id="r6plusIcon" onclick="d6DisplayContent()">
                             </ion-icon>
-                            <ion-icon name="remove-circle" style="display: none;" class="add-circle" id="minusIcon"
-                                onclick="displayForm()">
+                            <ion-icon name="remove-circle" style="display: none;" class="add-circle" id="r6minusIcon"
+                                onclick="d6HideContent()">
                         </td>
                     </tr>
                 </tbody>
@@ -1369,7 +1385,7 @@
                     <th>Breakfast Item:</th>
                     <th>Quantity:</th>
                     <th>Calories:</th>
-                    <th>Remove Item:</th>
+                    <th id="d6bRemoveItem" style="display: none;">Remove Item:</th>
                 </tr>
             </thead>
             <tbody>
@@ -1377,7 +1393,8 @@
                     <td>Zach</td>
                     <td> 150 </td>
                     <td> Healthy</td>
-                    <td> <button type="submit" id="submit" class="form-button2" style="max-width:150px;">
+                    <td id="d6bRemoveItem1" style="display: none;"> <button type="submit" id="submit"
+                            class="form-button2" style="max-width:150px;">
                             Remove
                         </button></td>
                 </tr>
@@ -1415,7 +1432,7 @@
                     <th>Lunch Item:</th>
                     <th>Quantity:</th>
                     <th>Calories:</th>
-                    <th>Remove Item:</th>
+                    <th id="d6lRemoveItem" style="display: none;">Remove Item:</th>
                 </tr>
             </thead>
             <tbody>
@@ -1423,7 +1440,8 @@
                     <td>Zach</td>
                     <td> 150 </td>
                     <td> Healthy</td>
-                    <td> <button type="submit" id="submit" class="form-button2" style="max-width:150px;">
+                    <td id="d6lRemoveItem1" style="display: none;"> <button type="submit" id="submit"
+                            class="form-button2" style="max-width:150px;">
                             Remove
                         </button></td>
                 </tr>
@@ -1461,7 +1479,7 @@
                     <th>Dinner Item:</th>
                     <th>Quantity:</th>
                     <th>Calories:</th>
-                    <th>Remove Item:</th>
+                    <th id="d6dRemoveItem" style="display: none;">Remove Item:</th>
                 </tr>
             </thead>
             <tbody>
@@ -1469,7 +1487,8 @@
                     <td>Zach</td>
                     <td> 150 </td>
                     <td> Healthy</td>
-                    <td> <button type="submit" id="submit" class="form-button2" style="max-width:150px;">
+                    <td id="d6dRemoveItem1" style="display: none;"> <button type="submit" id="submit"
+                            class="form-button2" style="max-width:150px;">
                             Remove
                         </button></td>
                 </tr>
@@ -1508,7 +1527,7 @@
                     <th>Snack Item:</th>
                     <th>Quantity:</th>
                     <th>Calories:</th>
-                    <th>Remove Item:</th>
+                    <th id="d6sRemoveItem" style="display: none;">Remove Item:</th>
                 </tr>
             </thead>
             <tbody>
@@ -1516,7 +1535,8 @@
                     <td>Zach</td>
                     <td> 150 </td>
                     <td> Healthy</td>
-                    <td> <button type="submit" id="submit" class="form-button2" style="max-width:150px;">
+                    <td id="d6sRemoveItem1" style="display: none;"> <button type="submit" id="submit"
+                            class="form-button2" style="max-width:150px;">
                             Remove
                         </button></td>
                 </tr>
@@ -1566,10 +1586,10 @@
                             <h3>Remove Food Items:</h3>
                         </td>
                         <td>
-                            <ion-icon name="add-circle" class="add-circle" id="plusIcon" onclick="displayForm()">
+                            <ion-icon name="add-circle" class="add-circle" id="r7plusIcon" onclick="d7DisplayContent()">
                             </ion-icon>
-                            <ion-icon name="remove-circle" style="display: none;" class="add-circle" id="minusIcon"
-                                onclick="displayForm()">
+                            <ion-icon name="remove-circle" style="display: none;" class="add-circle" id="r7minusIcon"
+                                onclick="d7HideContent()">
                         </td>
                     </tr>
                 </tbody>
@@ -1607,7 +1627,7 @@
                     <th>Breakfast Item:</th>
                     <th>Quantity:</th>
                     <th>Calories:</th>
-                    <th>Remove Item:</th>
+                    <th id="d7bRemoveItem" style="display: none;">Remove Item:</th>
                 </tr>
             </thead>
             <tbody>
@@ -1615,7 +1635,8 @@
                     <td>Zach</td>
                     <td> 150 </td>
                     <td> Healthy</td>
-                    <td> <button type="submit" id="submit" class="form-button2" style="max-width:150px;">
+                    <td id="d7bRemoveItem1" style="display: none;"> <button type="submit" id="submit"
+                            class="form-button2" style="max-width:150px;">
                             Remove
                         </button></td>
                 </tr>
@@ -1653,7 +1674,7 @@
                     <th>Lunch Item:</th>
                     <th>Quantity:</th>
                     <th>Calories:</th>
-                    <th>Remove Item:</th>
+                    <th id="d7lRemoveItem" style="display: none;">Remove Item:</th>
                 </tr>
             </thead>
             <tbody>
@@ -1661,7 +1682,8 @@
                     <td>Zach</td>
                     <td> 150 </td>
                     <td> Healthy</td>
-                    <td> <button type="submit" id="submit" class="form-button2" style="max-width:150px;">
+                    <td id="d7lRemoveItem1" style="display: none;"> <button type="submit" id="submit"
+                            class="form-button2" style="max-width:150px;">
                             Remove
                         </button></td>
                 </tr>
@@ -1699,7 +1721,7 @@
                     <th>Dinner Item:</th>
                     <th>Quantity:</th>
                     <th>Calories:</th>
-                    <th>Remove Item:</th>
+                    <th id="d7dRemoveItem" style="display: none;">Remove Item:</th>
                 </tr>
             </thead>
             <tbody>
@@ -1707,7 +1729,8 @@
                     <td>Zach</td>
                     <td> 150 </td>
                     <td> Healthy</td>
-                    <td> <button type="submit" id="submit" class="form-button2" style="max-width:150px;">
+                    <td id="d7dRemoveItem1" style="display: none;"> <button type="submit" id="submit"
+                            class="form-button2" style="max-width:150px;">
                             Remove
                         </button></td>
                 </tr>
@@ -1746,7 +1769,7 @@
                     <th>Snack Item:</th>
                     <th>Quantity:</th>
                     <th>Calories:</th>
-                    <th>Remove Item:</th>
+                    <th id="d7sRemoveItem" style="display: none;">Remove Item:</th>
                 </tr>
             </thead>
             <tbody>
@@ -1754,7 +1777,8 @@
                     <td>Zach</td>
                     <td> 150 </td>
                     <td> Healthy</td>
-                    <td> <button type="submit" id="submit" class="form-button2" style="max-width:150px;">
+                    <td id="d7sRemoveItem1" style="display: none;"> <button type="submit" id="submit"
+                            class="form-button2" style="max-width:150px;">
                             Remove
                         </button></td>
                 </tr>

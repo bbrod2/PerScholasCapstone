@@ -707,11 +707,145 @@ function HideContent() {
     DisplayContent('bRemoveItem','bRemoveItem1','lRemoveItem','lRemoveItem1','dRemoveItem','dRemoveItem1','sRemoveItem','sRemoveItem1', 'rminusIcon');
 }
 
+/*-------------------------day-two-----------------*/
 
+function d2HideContent() {
+    document.getElementById("r2plusIcon").style.display = "block";
+ 
    
+      for(let i=0; i < arguments.length; i++){
+        document.getElementById(arguments[i]).style.display = "none";
+      }
+      HideContent('d2bRemoveItem','d2bRemoveItem1','d2lRemoveItem','d2lRemoveItem1','d2dRemoveItem','d2dRemoveItem1','d2sRemoveItem','d2sRemoveItem1', 'r2minusIcon');
+    } 
 
 
+ function d2DisplayContent() {
+    document.getElementById("r2plusIcon").style.display = "none";
+  
+          for(let i=0; i < arguments.length; i++ ){
+            document.getElementById(arguments[i]).style.display = "block";
+       
+    }
+    DisplayContent('d2bRemoveItem','d2bRemoveItem1','d2lRemoveItem','d2lRemoveItem1','d2dRemoveItem','d2dRemoveItem1','d2sRemoveItem','d2sRemoveItem1', 'r2minusIcon');
+}
 
+/*-------------------------day-three-----------------*/
+
+function d3HideContent() {
+    document.getElementById("r3plusIcon").style.display = "block";
+ 
+   
+      for(let i=0; i < arguments.length; i++){
+        document.getElementById(arguments[i]).style.display = "none";
+      }
+      HideContent('d3bRemoveItem','d3bRemoveItem1','d3lRemoveItem','d3lRemoveItem1','d3dRemoveItem','d3dRemoveItem1','d3sRemoveItem','d3sRemoveItem1', 'r3minusIcon');
+    } 
+
+
+ function d3DisplayContent() {
+    document.getElementById("r3plusIcon").style.display = "none";
+  
+          for(let i=0; i < arguments.length; i++ ){
+            document.getElementById(arguments[i]).style.display = "block";
+       
+    }
+    DisplayContent('d3bRemoveItem','d3bRemoveItem1','d3lRemoveItem','d3lRemoveItem1','d3dRemoveItem','d3dRemoveItem1','d3sRemoveItem','d3sRemoveItem1', 'r3minusIcon');
+}
+
+/*-------------------------day-four-----------------*/
+function d4HideContent() {
+    document.getElementById("r4plusIcon").style.display = "block";
+ 
+   
+      for(let i=0; i < arguments.length; i++){
+        document.getElementById(arguments[i]).style.display = "none";
+      }
+      HideContent('d4bRemoveItem','d4bRemoveItem1','d4lRemoveItem','d4lRemoveItem1','d4dRemoveItem','d4dRemoveItem1','d4sRemoveItem','d4sRemoveItem1', 'r4minusIcon');
+    } 
+
+
+ function d4DisplayContent() {
+    document.getElementById("r4plusIcon").style.display = "none";
+  
+          for(let i=0; i < arguments.length; i++ ){
+            document.getElementById(arguments[i]).style.display = "block";
+       
+    }
+    DisplayContent('d4bRemoveItem','d4bRemoveItem1','d4lRemoveItem','d4lRemoveItem1','d4dRemoveItem','d4dRemoveItem1','d4sRemoveItem','d4sRemoveItem1', 'r4minusIcon');
+
+}
+
+/*-------------------------day-five-----------------*/
+function d5HideContent() {
+    document.getElementById("r5plusIcon").style.display = "block";
+ 
+   
+      for(let i=0; i < arguments.length; i++){
+        document.getElementById(arguments[i]).style.display = "none";
+      }
+      HideContent('d5bRemoveItem','d5bRemoveItem1','d5lRemoveItem','d5lRemoveItem1','d5dRemoveItem','d5dRemoveItem1','d5sRemoveItem','d5sRemoveItem1', 'r5minusIcon');
+    } 
+
+
+ function d5DisplayContent() {
+    document.getElementById("r5plusIcon").style.display = "none";
+  
+          for(let i=0; i < arguments.length; i++ ){
+            document.getElementById(arguments[i]).style.display = "block";
+       
+    }
+    DisplayContent('d5bRemoveItem','d5bRemoveItem1','d5lRemoveItem','d5lRemoveItem1','d5dRemoveItem','d5dRemoveItem1','d5sRemoveItem','d5sRemoveItem1', 'r5minusIcon');
+
+}
+
+/*-------------------------day-six-----------------*/
+function d6HideContent() {
+    document.getElementById("r6plusIcon").style.display = "block";
+ 
+   
+      for(let i=0; i < arguments.length; i++){
+        document.getElementById(arguments[i]).style.display = "none";
+      }
+      HideContent('d6bRemoveItem','d6bRemoveItem1','d6lRemoveItem','d6lRemoveItem1','d6dRemoveItem','d6dRemoveItem1','d6sRemoveItem','d6sRemoveItem1', 'r6minusIcon');
+    } 
+
+
+ function d6DisplayContent() {
+    document.getElementById("r6plusIcon").style.display = "none";
+  
+          for(let i=0; i < arguments.length; i++ ){
+            document.getElementById(arguments[i]).style.display = "block";
+       
+    }
+    DisplayContent('d6bRemoveItem','d6bRemoveItem1','d6lRemoveItem','d6lRemoveItem1','d6dRemoveItem','d6dRemoveItem1','d6sRemoveItem','d6sRemoveItem1', 'r6minusIcon');
+
+}
+
+
+/*-------------------------day-seven-----------------*/
+
+function d7HideContent() {
+    document.getElementById("r7plusIcon").style.display = "block";
+ 
+   
+      for(let i=0; i < arguments.length; i++){
+        document.getElementById(arguments[i]).style.display = "none";
+      }
+      HideContent('d7bRemoveItem','d7bRemoveItem1','d7lRemoveItem','d7lRemoveItem1','d7dRemoveItem','d7dRemoveItem1','d7sRemoveItem','d7sRemoveItem1', 'r7minusIcon');
+    } 
+
+
+ function d7DisplayContent() {
+    document.getElementById("r7plusIcon").style.display = "none";
+  
+          for(let i=0; i < arguments.length; i++ ){
+            document.getElementById(arguments[i]).style.display = "block";
+       
+    }
+    DisplayContent('d7bRemoveItem','d7bRemoveItem1','d7lRemoveItem','d7lRemoveItem1','d7dRemoveItem','d7dRemoveItem1','d7sRemoveItem','d7sRemoveItem1', 'r7minusIcon');
+
+}
 
 /*------------------------------------------------------*/
 /*--------------FoodLog-End-----------------*/
