@@ -1,0 +1,573 @@
+<!-- package perscholas.controller;
+
+import java.security.Principal;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.persistence.Query;
+import javax.validation.Valid;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.repository.query.Param;
+import org.springframework.stereotype.Controller;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.FieldError;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
+
+import perscholas.database.dao.FoodLogDAO;
+import perscholas.database.dao.UserDAO;
+import perscholas.database.dao.UserFoodDAO;
+import perscholas.database.entity.FoodLog;
+import perscholas.database.entity.User;
+import perscholas.database.entity.UserFood;
+import perscholas.form.AddFoodItemForm;
+import perscholas.form.FoodInputForm;
+
+@Controller
+public class FoodLogController {
+
+	@Autowired
+	private UserDAO userDao;
+
+	@Autowired
+	private FoodLogDAO foodLogDao;
+
+	@Autowired
+	private UserFoodDAO userFoodDao;
+
+	@RequestMapping("/")
+	public ModelAndView showFoodLogpage(@Param("day") Integer day, Principal principal) {
+		//This needs to take in a request param for day
+		//That will pass to the dao for the day
+		// Fix Queries to include breakfast lunch and dinner
+		// put day in the model
+		// Fix jsp page so add day to url upon click of day button ?day=1
+		//Fix jsp page to show the day in the title from the model
+		//Loop over and display breakfast lunch and dinner 
+		//Remove extra copy and paste code
+		
+		ModelAndView modelandview = new ModelAndView("/login/foodlog");
+		
+		String email = principal.getName();
+		User user = userDao.findByEmail(email);
+		modelandview.addObject("user", user);
+		UserFood userFood = new UserFood();
+		userFood.getDay();
+		List<FoodLog> userfoodLog = foodLogDao.getUserFoodLog(user.getId(), , null);
+		modelandview.addObject("breakfastlog", userfoodLog);
+		
+		
+	}
+
+	@RequestMapping(value = "/foodlog", method = RequestMethod.POST)
+	public ModelAndView foodInputSubmit(@Valid FoodInputForm form, BindingResult bindingResult, Principal principal)
+			throws Exception {
+		ModelAndView result = new ModelAndView("login/foodlog");
+
+		// form validation
+		result.addObject("form", form);
+
+		System.out.println(form); // jj
+
+		if (bindingResult.hasErrors()) {
+
+			List<String> errors = new ArrayList<String>();
+
+			for (FieldError error : bindingResult.getFieldErrors()) {
+				System.out.println(error.getField() + " = " + error.getDefaultMessage());
+				errors.add(error.getDefaultMessage());
+			}
+
+			result.addObject("errorFields", bindingResult.getFieldErrors());
+			result.addObject("errors", errors);
+
+			return result;
+
+		}
+
+		FoodLog foodlog = new FoodLog();
+		foodlog.setFoodName(form.getFoodName());
+		foodlog.setQuantity(form.getQuantity());
+		foodlog.setCalories(form.getCalories());
+		foodLogDao.save(foodlog);
+		return result;
+
+	}
+
+	@RequestMapping(value = "/breakFast", method = RequestMethod.POST)
+	public ModelAndView foodAddItemSubmit(@Valid AddFoodItemForm bform, BindingResult bindingResult,
+			Principal principal) throws Exception {
+		ModelAndView result = new ModelAndView("login/foodlog");
+
+		// form validation result.addObject("form", form);
+
+		System.out.println(bform); // jj
+
+		if (bindingResult.hasErrors()) {
+
+			List<String> errors = new ArrayList<String>();
+
+			for (FieldError error : bindingResult.getFieldErrors()) {
+				System.out.println(error.getField() + " = " + error.getDefaultMessage());
+				errors.add(error.getDefaultMessage());
+			}
+
+			result.addObject("errorFields", bindingResult.getFieldErrors());
+			result.addObject("errors", errors);
+
+			return result;
+
+		}
+
+		UserFood userFood = new UserFood();
+		String foodName = bform.getFoodName();
+		FoodLog foodLog = foodLogDao.findByFoodName(foodName);
+		userFood.setFoodLog(foodLog);
+		userFood.setDay(bform.getDay());
+		userFood.setMealType(bform.getMealType());
+		String email = principal.getName();
+		User user = userDao.findByEmail(email);
+		userFood.setUser(user);
+		userFoodDao.save(userFood);
+		List<FoodLog> userfoodLog = foodLogDao.getUserFoodLog(user.getId());
+		result.addObject("breakfastlog", userfoodLog);
+		List<FoodLog> userLunchLog = foodLogDao.getUserFoodLog(user.getId());
+		result.addObject("lunchlog", userLunchLog);
+		List<FoodLog> userDinnerLog = foodLogDao.getUserDinnerLog(user.getId());
+		result.addObject("dinnerlog", userDinnerLog);
+		List<FoodLog> userSnackLog = foodLogDao.getUserDinnerLog(user.getId());
+		result.addObject("snacklog", userSnackLog);
+		
+		return result;
+
+	}
+	
+	/*
+	 * @RequestMapping(value = "/lunch", method = RequestMethod.POST) public
+	 * ModelAndView lunchAddItemSubmit(@Valid AddFoodItemForm bform, BindingResult
+	 * bindingResult, Principal principal) throws Exception { ModelAndView result =
+	 * new ModelAndView("login/foodlog");
+	 * 
+	 * // form validation result.addObject("form", form);
+	 * 
+	 * System.out.println(bform); // jj
+	 * 
+	 * if (bindingResult.hasErrors()) {
+	 * 
+	 * List<String> errors = new ArrayList<String>();
+	 * 
+	 * for (FieldError error : bindingResult.getFieldErrors()) {
+	 * System.out.println(error.getField() + " = " + error.getDefaultMessage());
+	 * errors.add(error.getDefaultMessage()); }
+	 * 
+	 * result.addObject("errorFields", bindingResult.getFieldErrors());
+	 * result.addObject("errors", errors);
+	 * 
+	 * return result;
+	 * 
+	 * }
+	 * 
+	 * UserFood userFood = new UserFood(); String foodName = bform.getFoodName();
+	 * FoodLog foodLog = foodLogDao.findByFoodName(foodName);
+	 * userFood.setFoodLog(foodLog); userFood.setDay(bform.getDay());
+	 * userFood.setMealType(bform.getMealType()); String email =
+	 * principal.getName(); User user = userDao.findByEmail(email);
+	 * userFood.setUser(user); userFoodDao.save(userFood); List<FoodLog>
+	 * userLunchLog = foodLogDao.getUserFoodLog(user.getId(),"lunch", 1);
+	 * result.addObject("lunchlog", userLunchLog); List<FoodLog> userfoodLog =
+	 * foodLogDao.getUserFoodLog(user.getId()); result.addObject("breakfastlog",
+	 * userfoodLog); List<FoodLog> userDinnerLog =
+	 * foodLogDao.getUserDinnerLog(user.getId()); result.addObject("dinnerlog",
+	 * userDinnerLog); List<FoodLog> userSnackLog =
+	 * foodLogDao.getUserDinnerLog(user.getId()); result.addObject("snacklog",
+	 * userSnackLog);
+	 * 
+	 * 
+	 * return result;
+	 * 
+	 * }
+	 * 
+	 * @RequestMapping(value = "/dinner", method = RequestMethod.POST) public
+	 * ModelAndView dinnerAddItemSubmit(@Valid AddFoodItemForm bform, BindingResult
+	 * bindingResult, Principal principal) throws Exception { ModelAndView result =
+	 * new ModelAndView("login/foodlog");
+	 * 
+	 * // form validation result.addObject("form", form);
+	 * 
+	 * System.out.println(bform); // jj
+	 * 
+	 * if (bindingResult.hasErrors()) {
+	 * 
+	 * List<String> errors = new ArrayList<String>();
+	 * 
+	 * for (FieldError error : bindingResult.getFieldErrors()) {
+	 * System.out.println(error.getField() + " = " + error.getDefaultMessage());
+	 * errors.add(error.getDefaultMessage()); }
+	 * 
+	 * result.addObject("errorFields", bindingResult.getFieldErrors());
+	 * result.addObject("errors", errors);
+	 * 
+	 * return result;
+	 * 
+	 * }
+	 * 
+	 * UserFood userFood = new UserFood(); String foodName = bform.getFoodName();
+	 * FoodLog foodLog = foodLogDao.findByFoodName(foodName);
+	 * userFood.setFoodLog(foodLog); userFood.setDay(bform.getDay());
+	 * userFood.setMealType(bform.getMealType()); String email =
+	 * principal.getName(); User user = userDao.findByEmail(email);
+	 * userFood.setUser(user); userFoodDao.save(userFood); List<FoodLog>
+	 * userDinnerLog = foodLogDao.getUserDinnerLog(user.getId());
+	 * result.addObject("dinnerlog", userDinnerLog); List<FoodLog> userSnackLog =
+	 * foodLogDao.getUserDinnerLog(user.getId()); result.addObject("snacklog",
+	 * userSnackLog); List<FoodLog> userLunchLog =
+	 * foodLogDao.getUserFoodLog(user.getId()); result.addObject("lunchlog",
+	 * userLunchLog); List<FoodLog> userfoodLog =
+	 * foodLogDao.getUserFoodLog(user.getId()); result.addObject("breakfastlog",
+	 * userfoodLog);
+	 * 
+	 * 
+	 * return result;
+	 * 
+	 * }
+	 * 
+	 * @RequestMapping(value = "/snack", method = RequestMethod.POST) public
+	 * ModelAndView snackAddItemSubmit(@Valid AddFoodItemForm bform, BindingResult
+	 * bindingResult, Principal principal) throws Exception { ModelAndView result =
+	 * new ModelAndView("login/foodlog");
+	 * 
+	 * // form validation result.addObject("form", form);
+	 * 
+	 * System.out.println(bform); // jj
+	 * 
+	 * if (bindingResult.hasErrors()) {
+	 * 
+	 * List<String> errors = new ArrayList<String>();
+	 * 
+	 * for (FieldError error : bindingResult.getFieldErrors()) {
+	 * System.out.println(error.getField() + " = " + error.getDefaultMessage());
+	 * errors.add(error.getDefaultMessage()); }
+	 * 
+	 * result.addObject("errorFields", bindingResult.getFieldErrors());
+	 * result.addObject("errors", errors);
+	 * 
+	 * return result;
+	 * 
+	 * }
+	 * 
+	 * UserFood userFood = new UserFood(); String foodName = bform.getFoodName();
+	 * FoodLog foodLog = foodLogDao.findByFoodName(foodName);
+	 * userFood.setFoodLog(foodLog); userFood.setDay(bform.getDay());
+	 * userFood.setMealType(bform.getMealType()); String email =
+	 * principal.getName(); User user = userDao.findByEmail(email);
+	 * userFood.setUser(user); userFoodDao.save(userFood); List<FoodLog>
+	 * userSnackLog = foodLogDao.getUserDinnerLog(user.getId());
+	 * result.addObject("snacklog", userSnackLog); List<FoodLog> userDinnerLog =
+	 * foodLogDao.getUserDinnerLog(user.getId()); result.addObject("dinnerlog",
+	 * userDinnerLog); List<FoodLog> userLunchLog =
+	 * foodLogDao.getUserFoodLog(user.getId()); result.addObject("lunchlog",
+	 * userLunchLog); List<FoodLog> userfoodLog =
+	 * foodLogDao.getUserFoodLog(user.getId()); result.addObject("breakfastlog",
+	 * userfoodLog);
+	 * 
+	 * 
+	 * return result;
+	 * 
+	 * }
+	 */
+	
+
+}  */ -->
+
+
+<!--
+    
+    
+    @Repository
+public interface FoodLogDAO extends JpaRepository<FoodLog, Long> {
+
+	public FoodLog findById(@Param("id") Integer id);
+
+	public List<FoodLog> findAllById(@Param("id") Integer id);
+
+	public FoodLog findByFoodName(@Param("food_name") String foodName);
+	
+	@Query(value= "select fl.* from food_log fl, user_food uf where fl.id = uf.food_id and uf.user_id = :userId and uf.meal_type = :mealType and uf.day = :day" , nativeQuery = true)
+	List<FoodLog> getUserFoodLog(@Param("userId")Integer userId,@Param("mealType")String mealType, @Param("day") Integer day );
+	
+	/*
+	 * @Query(value=
+	 * "select fl.* from food_log fl, user_food uf where fl.id = uf.food_id and uf.user_id = :userId and uf.meal_type = \"lunch\" and uf.day = \"1\""
+	 * , nativeQuery = true) List<FoodLog> getUserLunchLog(@Param("userId")Integer
+	 * userId);
+	 * 
+	 * @Query(value=
+	 * "select fl.* from food_log fl, user_food uf where fl.id = uf.food_id and uf.user_id = :userId and uf.meal_type = \"dinner\" and uf.day = \"1\""
+	 * , nativeQuery = true) List<FoodLog> getUserDinnerLog(@Param("userId")Integer
+	 * userId);
+	 * 
+	 * @Query(value=
+	 * "select fl.* from food_log fl, user_food uf where fl.id = uf.food_id and uf.user_id = :userId and uf.meal_type = \"snack\" and uf.day = \"1\""
+	 * , nativeQuery = true) List<FoodLog> getUserSnackLog(@Param("userId")Integer
+	 * userId);
+	 */
+
+
+ <section class="table-section" id="dayOneInfo" style="display: none;">
+        <div>
+            <h2>Day 1:</h2>
+            <p class="form-description" style=" text-align: center;" id="sub-header">Track Your Calorie
+                In-take for
+                7-Days!</p>
+        </div>
+        <table class="button1-table">
+            <tbody>
+                <tr>
+                    <td>
+                        <h3>Input Food Item:</h3>
+                    </td>
+                    <td>
+                        <ion-icon name="add-circle" class="add-circle" id="plusIcon" onclick="displayForm()"></ion-icon>
+                        <ion-icon name="remove-circle" style="display: none;" class="add-circle" id="minusIcon"
+                            onclick="displayForm()">
+                    </td>
+                    <td style="max-width: 300px; display: none;" id="breakFastForm">
+                        <form method="post" action="/foodlog">
+                            <input type="text" name="foodName" id="foodName" placeholder="Breakfast Item"  required>
+                            <input type="text" name="quantity" id="quantity" placeholder="Quantity"   required>
+                            <input type="text" name="calories" id="calories" placeholder="Calories"  required>
+                            <button type="submit" id="submit" class="form-button1">
+                                Add
+                            </button>
+                        </form>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="button1-table">
+            <tbody>
+                <tr>
+                    <td>
+                        <h3>Remove Food Items:</h3>
+                    </td>
+                    <td>
+                        <ion-icon name="add-circle" class="add-circle" id="rplusIcon" onclick="DisplayContent()">
+                        </ion-icon>
+                        <ion-icon name="remove-circle" style="display: none;" class="add-circle" id="rminusIcon"
+                            onclick="HideContent()">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="button-table">
+            <tbody>
+                <tr>
+                    <td>
+                        <h3>Add Breakfast Item:</h3>
+                    </td>
+                    <td>
+                        <ion-icon name="add-circle" class="add-circle" id="breakFastplusIcon"
+                            onclick="displaySearchBar()">
+                        </ion-icon>
+                        <ion-icon name="remove-circle" style="display: none;" class="add-circle" id="breakFastminusIcon"
+                            onclick="displaySearchBar()">
+                        </ion-icon>
+                    </td>
+                    <td style="max-width: 300px; display: none;" id="breakFastSearchBar">
+                        <form method="post" action="/breakFast">
+                        <Input type = "hidden" name= "day" value ="1">
+                        <Input type = "hidden" name= "mealType" value ="breakfast">
+                        <input type="text" name="foodName" id="search" placeholder="Search" required>
+                            <button type="submit" id="submit" class="form-button1">
+                                Add
+                            </button>
+                        </form>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table class="dummy-table row shadow" id="breakFastOneTable">
+            <thead>
+                <tr>
+                    <th>Breakfast Item:</th>
+                    <th>Quantity:</th>
+                    <th>Calories:</th>
+                    <th id="bRemoveItem" style="display: none;">Remove Item:</th>
+
+                </tr>
+            </thead>
+            <tbody>
+            <c:forEach items="${breakfastlog}" var="userfoodLog">
+                <tr>          
+                    <td>${userfoodLog.getFoodName()}</td>
+                    <td>${userfoodLog.getQuantity()} </td>
+                    <td>${userfoodLog.getCalories()}</td>
+                    <td id="bRemoveItem1" style="display: none;"> <button type="submit" id="submit" class="form-button2"
+                            style="max-width:150px;">
+                            Remove
+                        </button></td>
+                </tr>
+             </c:forEach>
+            </tbody>
+        </table>
+        <table class="button-table">
+            <tbody>
+                <tr>
+                    <td>
+                        <h3>Add Lunch Item:</h3>
+                    </td>
+                    <td>
+                        <ion-icon name="add-circle" class="add-circle" id="lunchplusIcon" onclick="displaySearchBar1()">
+                        </ion-icon>
+                        <ion-icon name="remove-circle" style="display: none;" class="add-circle" id="lunchminusIcon"
+                            onclick="displaySearchBar1()">
+                        </ion-icon>
+                    </td>
+                    <td id="lunchSearchBar" style="display: none;">
+                       <form method="post" action="/lunch">
+                        <Input type = "hidden" name= "day" value ="1">
+                        <Input type = "hidden" name= "mealType" value ="lunch">
+                         <input type="text" name="foodName" id="search" placeholder="Search" required>
+                            <button type="submit" id="submit" class="form-button1">
+                                Add
+                            </button>
+                        </form>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="dummy-table row shadow">
+            <thead>
+                <tr>
+                    <th>Lunch Item:</th>
+                    <th>Quantity:</th>
+                    <th>Calories:</th>
+                    <th id="lRemoveItem" style="display: none;">Remove Item:</th>
+                </tr>
+            </thead>
+            <tbody>
+            <c:forEach items="${lunchlog}" var="userLunchLog">
+                <tr>
+                    <td>${userLunchLog.getFoodName()}</td>
+                    <td>${userLunchLog.getQuantity()}</td> 
+                    <td>${userLunchLog.getCalories()}</td>
+                    <td id="lRemoveItem1" style="display: none;"> <button type="submit" id="submit" class="form-button2"
+                            style="max-width:150px;">
+                            Remove
+                        </button></td>
+                </tr>
+            </c:forEach>
+            </tbody>
+        </table>
+        <table class="button-table">
+            <tbody>
+                <tr>
+                    <td>
+                        <h3>Add Dinner Item:</h3>
+                    </td>
+                    <td>
+                        <ion-icon name="add-circle" class="add-circle" id="dinnerplusIcon"
+                            onclick="displaySearchBar2()"></ion-icon>
+                        <ion-icon name="remove-circle" style="display: none;" class="add-circle" id="dinnerminusIcon"
+                            onclick="displaySearchBar2()">
+                        </ion-icon>
+                    </td>
+                    <td id="dinnerSearchBar" style="display: none;">
+                        <form method="post" action="/dinner">
+                        <Input type = "hidden" name= "day" value ="1">
+                        <Input type = "hidden" name= "mealType" value ="dinner">
+                        <input type="text" name="foodName" id="search" placeholder="Search" required>
+
+                            <button type="submit" id="submit" class="form-button1">
+                                Add
+                            </button>
+                        </form>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="dummy-table row shadow">
+            <thead>
+          
+                <tr>
+                    <th>Dinner Item:</th>
+                    <th>Quantity:</th>
+                    <th>Calories:</th>
+                    <th id="dRemoveItem" style="display: none;">Remove Item:</th>
+                </tr>
+            </thead>
+            <tbody>
+             <c:forEach items="${dinnerlog}" var="userDinnerLog">
+                <tr>
+                    <td>${userDinnerLog.getFoodName()}</td>
+                    <td>${userDinnerLog.getQuantity()} </td>
+                    <td>${userDinnerLog.getCalories()}</td>
+                    <td id="dRemoveItem1" style="display: none;"> <button type="submit" id="submit" class="form-button2"
+                            style="max-width:150px;">
+                            Remove
+                        </button></td>
+                </tr>
+                </c:forEach>
+            </tbody>
+        </table>
+        <table class="button-table">
+            <tbody>
+                <tr>
+                    <td>
+                        <h3>Add Snack Item:</h3>
+                    </td>
+                    <td>
+                        <ion-icon name="add-circle" class="add-circle" id="snackplusIcon" onclick="displaySearchBar3()">
+                        </ion-icon>
+                        <ion-icon name="remove-circle" style="display: none;" class="add-circle" id="snackminusIcon"
+                            onclick="displaySearchBar3()">
+                        </ion-icon>
+                    </td>
+                    <td id="snackSearchBar" style="display: none;">
+                        <form method="post" action="/snack">
+                        <Input type = "hidden" name= "day" value ="1">
+                        <Input type = "hidden" name= "mealType" value ="dinner">
+                        <input type="text" name="foodName" id="search" placeholder="Search" required>
+
+                            <button type="submit" id="submit" class="form-button1">
+                                Add
+                            </button>
+                        </form>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table class="dummy-table row shadow ">
+            <thead>
+                <tr>
+                    <th>Snack Item:</th>
+                    <th>Quantity:</th>
+                    <th>Calories:</th>
+                    <th id="sRemoveItem" style="display: none;">Remove Item:</th>
+                </tr>
+            </thead>
+            <tbody>
+            <c:forEach items="${snacklog}" var="userSnackLog">
+                <tr>
+                    <td>${userSnackLog.getFoodName()}</td>
+                    <td>${userSnackLog.getQuantity()} </td>
+                    <td>${userSnackLog.getCalories()}</td>
+                    <td id="sRemoveItem1" style="display: none;"> <button type="submit" id="submit" class="form-button2"
+                            style="max-width:150px;">
+                            Remove
+                        </button></td>
+                </tr>
+           </c:forEach>
+            </tbody>
+        </table>
+    </section>
+	
+	
+
+}-->
